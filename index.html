@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 <div class="home">
@@ -22,6 +23,7 @@ layout: default
 
 </div>
 
+{% if post.comments %}
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -44,3 +46,4 @@ layout: default
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endif %}
