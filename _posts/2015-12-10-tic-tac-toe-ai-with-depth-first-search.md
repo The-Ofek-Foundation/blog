@@ -18,8 +18,6 @@ For the game of Tic Tac Toe, consider the following method:
 
 {% highlight java %}
 /**
- * This alternate implementation of DFS doesn't require a possibleMoves function.
- * This makes it faster, and probably more intuitive
  * @param  board The current state of the board
  * @param  xTurn The current turn
  * @return the game result - a 1 if X's win, -1 if Y's, and 0 for tie game
