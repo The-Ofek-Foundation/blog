@@ -10,6 +10,7 @@ comments: true
 This is my first post, so please don't be too rough or judge too harshly.
 
 [Depth-first search][dfs wiki] is an algorithm that traverses a tree depth-first, meaning that it traverses the tree [recursively][recursive wiki], exhausting one branch completely before continuing to the next one.
+
 ![dfs order diagram] **Source**: Wikipedia
 
 This can be used to [solve a game][solved games], to find the best possible move or simply who wins given ideal gameplay. This form of game AI is amongst the **easiest** to implement, since it *doesn't require the construction of a tree*. Since this algorithm works bottom up without rechecking any nodes, it is typially using a recursive function and a function that checks if the game is over.
