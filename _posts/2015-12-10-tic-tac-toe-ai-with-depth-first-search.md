@@ -18,7 +18,7 @@ This can be used to [solve a game][solved games], to find the best possible move
 For the game of Tic Tac Toe, consider the following method:
 
 {% highlight java %}
-{% include /blog/assets/solve-tic-tac-toe.java %}
+
 {% endhighlight %}
 
 This recursive method does the following:
