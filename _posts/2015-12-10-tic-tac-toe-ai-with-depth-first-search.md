@@ -34,7 +34,7 @@ This recursive method does the following:
 
 In short, it finds the results by assuming that both players will play moves that maximize their game. Note that it is very simple to change this algorithm to play [Misère or Anti Tic Tac Toe][misere], a game played like Tic Tac Toe except that the goal of the game is to lose.
 
-Since this solution is written for simplicity, it can take nearly half a second to run on Tic Tac Toe, although it can relatively easily be implemented to run in less than **a hundredth of a second** (see [Kesav Viswinadha's implementation](/blog/kesav-viswanadha-tic-tac-toe/ "source")). Of course for larger games such as Connect Four and Gomoku (connect five), it will take much, much longer. This is because the fact that the complexity of depth-first search is **O(b<sup>d</sup>)**, where b is the branching factor (average number of possible moves in any given board position) and d is the average depth or moves played in a game before it is over.
+Since this solution is written for simplicity, it can take nearly half a second to run on Tic Tac Toe, although it can relatively easily be implemented to run in less than **a hundredth of a second** (see [Kesav Viswanadha's implementation](/blog/kesav-viswanadha-tic-tac-toe/ "source")). Of course for larger games such as Connect Four and Gomoku (connect five), it will take much, much longer. This is because the fact that the complexity of depth-first search is **O(b<sup>d</sup>)**, where b is the branching factor (average number of possible moves in any given board position) and d is the average depth or moves played in a game before it is over.
 
 If the time it takes to run on Tic Tac Toe is 1, then the relative runtimes for different games would roughly be:
 
