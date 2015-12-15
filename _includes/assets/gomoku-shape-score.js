@@ -1,5 +1,5 @@
 function gomoku_shape_score(consecutive, open_ends, curr_turn) {
-  if (open_ends == 0 && consecutive < 5s)
+  if (open_ends == 0 && consecutive < 5)
     return 0;
   switch (consecutive) {
     case 4:
