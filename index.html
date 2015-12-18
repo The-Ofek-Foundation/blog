@@ -30,7 +30,7 @@ comments: true
         {% if group == null or group == post.group %}
         <li>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<span class="entry-date"></a>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-meta title-case">{{ post.date | date: "%b %-d, %Y" }} {{post.subcategory}}</span>
         </li>
         {% endif %}
         {% endif %}
