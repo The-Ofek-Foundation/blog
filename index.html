@@ -15,7 +15,7 @@ comments: true
       {% endfor %}
     {% else %}
       {% for tag in tags_list %}
-        <li class="title-case"><a href="#{{ tag[0] }}">{{ tag[0] }} <span>- {{ tag[1].size }}</span></a></li>
+        <li><a href="#{{ tag[0] }}">{{ tag[0] }} <span>- {{ tag[1].size }}</span></a></li>
       {% endfor %}
     {% endif %}
   {% assign tags_list = nil %}
