@@ -5,19 +5,40 @@ comments: true
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Categories</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+  <ul class="tag-box inline">
+  {% assign tags_list = site.categories %}
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+        <li><a href="#{{ tag }}">{{ tag }} <span>- {{ site.tags[tag].size }}</span></a></li>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %}
+        <li><a href="#{{ tag[0] }}">{{ tag[0] }} <span>- {{ tag[1].size }}</span></a></li>
+      {% endfor %}
+    {% endif %}
+  {% assign tags_list = nil %}
   </ul>
+
+  {% for tag in site.categories %}
+    <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+    <ul class="post-list">
+      {% assign pages_list = tag[1] %}
+      {% for post in pages_list %}
+        {% if post.title != null %}
+        {% if group == null or group == post.group %}
+        <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<span class="entry-date"></a>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </li>
+        {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
+      {% assign group = nil %}
+    </ul>
+  {% endfor %}
 
   <p>Check out <a href="/">my website</a>!</p>
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

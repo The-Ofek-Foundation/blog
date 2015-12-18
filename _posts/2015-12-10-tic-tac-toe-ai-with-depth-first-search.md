@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tic Tac Toe AI with Depth-First Search
-category: ai
+category: Artificial Intelligence
 comments: true
 ---
 
@@ -54,6 +54,8 @@ The moral of the story is: while depth-first search can be used to solve Tic Tac
 
 If you want to check out my Connect Four AI (which boasts as much stronger than any other AI you'll find online), be sure to [check it out](/ConnectOfek/ "my Connect Four AI").
 
+**A complete Tic Tac Toe depth-first search AI sample can be found [here][my AI]!**
+
 If you have any questions, advice, or feedback at all, feel free to leave a comment down below!
 
 [dfs wiki]:https://en.wikipedia.org/wiki/Depth-first_search "Depth-first search wikipedia"
@@ -62,3 +64,4 @@ If you have any questions, advice, or feedback at all, feel free to leave a comm
 [solved games]:https://en.wikipedia.org/wiki/Solved_game "solved games"
 [misere]:http://coolmathstuff123.blogspot.com/2013/09/anti-tic-tac-toe.html "blog about Misère Tic Tac Toe"
 [moon img]:http://www.wired.com/wp-content/uploads/images_blogs/wiredscience/2012/03/earthmoon_near_big.jpg "Earth and Moon"
+[my AI]:https://github.com/The-Ofek-Foundation/TicTacToe/blob/master/TicTacToe.java "Tic Tac Toe AI sample"

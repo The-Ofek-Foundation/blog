@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Minimax for Gomoku (Connect Five)
-category: ai
+category: Artificial Intelligence
 comments: true
 ---
 
