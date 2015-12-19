@@ -3,6 +3,7 @@ layout: default
 title: Minimax for Gomoku (Connect Five)
 category: Artificial Intelligence
 subcategory: Minimax
+new-tab-redirect: true
 comments: true
 ---
 
@@ -102,32 +103,19 @@ As you can see, in every ply the player tries maximizing their own gains and min
 You can build a pretty reasonable AI using this pure minimax algorithm, though there are still many improvements that can be made, that I'll perhaps cover in a future post. If you can't wait, try reading into [alpha-beta pruning], or try playing my own [Gomoku AI]!
 
 
-[last post]:/blog/ai/2015/12/10/tic-tac-toe-ai-with-depth-first-search.html "Tic Tac Toe AI with depth-first search"
-
+[last post]:{{site.baseurl}}/artificial%20intelligence/2015/12/10/tic-tac-toe-ai-with-depth-first-search.html "Tic Tac Toe AI with depth-first search"
 [dfs wiki]:https://en.wikipedia.org/wiki/Depth-first_search "Depth-first search wikipedia"
-
 [branching factor]:https://en.wikipedia.org/wiki/Branching_factor "branching factor wikipedia"
-
 [minimax]:https://en.wikipedia.org/wiki/Minimax "Minimax wikipedia"
-
 [evaluation function]:https://en.wikipedia.org/wiki/Evaluation_function "evaluation function wikipedia"
-
-[unconditional win]:/blog/assets/tic-tac-toe-unconditional-win.png "an unconditional win"
-
-[conditional win]:/blog/assets/tic-tac-toe-conditional-win.png "a turn-conditional win"
-
-[analyze tic tac toe position]:/blog/assets/tic-tac-toe-analyze.png "position to analyze"
-
-[c1]:/blog/assets/tic-tac-toe-analyze-c1.png "child 1"
-
-[c2]:/blog/assets/tic-tac-toe-analyze-c2.png "child 2"
-
-[c3]:/blog/assets/tic-tac-toe-analyze-c3.png "child 3"
-
-[c4]:/blog/assets/tic-tac-toe-analyze-c4.png "child 4"
-
+[unconditional win]:{{site.baseurl}}/assets/tic-tac-toe-unconditional-win.png "an unconditional win"
+[conditional win]:{{site.baseurl}}/assets/tic-tac-toe-conditional-win.png "a turn-conditional win"
+[analyze tic tac toe position]:{{site.baseurl}}/assets/tic-tac-toe-analyze.png "position to analyze"
+[c1]:{{site.baseurl}}/assets/tic-tac-toe-analyze-c1.png "child 1"
+[c2]:{{site.baseurl}}/assets/tic-tac-toe-analyze-c2.png "child 2"
+[c3]:{{site.baseurl}}/assets/tic-tac-toe-analyze-c3.png "child 3"
+[c4]:{{site.baseurl}}/assets/tic-tac-toe-analyze-c4.png "child 4"
 [ply]:https://en.wikipedia.org/wiki/Ply_(game_theory) "ply wiki"
-
 [alpha-beta pruning]:https://en.wikipedia.org/wiki/Alpha–beta_pruning "alpha-beta pruning"
-
 [Gomoku AI]:/Online-Go/ "Gomoku AI"
+[minimax improvements post]:{{site.baseurl}}/artificial%20intelligence/2015/12/18/minimax-improvements.html

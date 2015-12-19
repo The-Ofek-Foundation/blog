@@ -3,6 +3,7 @@ layout: default
 title: Tic Tac Toe AI with Depth-First Search
 category: Artificial Intelligence
 subcategory: Depth-First Search
+new-tab-redirect: true
 comments: true
 ---
 
