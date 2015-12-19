@@ -15,7 +15,7 @@ This is my first post, so please don't be too rough or judge too harshly.
 
 ![dfs order diagram] **Source**: Wikipedia
 
-This can be used to [solve a game][solved games], to find the best possible move or simply who wins given ideal gameplay. This form of game AI is amongst the **easiest** to implement, since it *doesn't require the construction of a tree*. Since this algorithm works bottom up without rechecking any nodes, it is typially using a recursive function and a function that checks if the game is over.
+This can be used to [solve a game][solved games], to find the best possible move or simply who wins given ideal gameplay. This form of game AI is amongst the **easiest** to implement, since it *doesn't require the construction of a tree*. Since this algorithm works bottom up without rechecking any nodes, it is typically using a recursive function and a function that checks if the game is over.
 
 For the game of Tic Tac Toe, consider the following method:
 
@@ -46,7 +46,7 @@ If the time it takes to run on Tic Tac Toe is 1, then the relative runtimes for 
  - **Chess:** 1.28 * 10<sup>118</sup>
  - **Go (Weiqi):** 1.87 * 10<sup>354</sup>
 
-To put it into comparison, if you were to move one hairlength, solve Tic Tac Toe completely, then move another hairlength and repeat, while someone else was trying to solve Connect Four, the other person would be done when you move the distance from Earth to the Moon *one thousand times*! In other words, **you aren't going to get far trying to solve Connect Four, nor any other complex game, using pure depth-first search**.
+To put it into comparison, if you were to move one hair-length, solve Tic Tac Toe completely, then move another hair-length and repeat, while someone else was trying to solve Connect Four, the other person would be done when you move the distance from Earth to the Moon *one thousand times*! In other words, **you aren't going to get far trying to solve Connect Four, nor any other complex game, using pure depth-first search**.
 
 ![moon img]
 
@@ -60,10 +60,10 @@ If you want to check out my Connect Four AI (which boasts as much stronger than 
 
 If you have any questions, advice, or feedback at all, feel free to leave a comment down below!
 
-[dfs wiki]:https://en.wikipedia.org/wiki/Depth-first_search "Depth-first search wikipedia"
-[recursive wiki]:https://en.wikipedia.org/wiki/Recursion_(computer_science) "Recursion wikipedia"
+[dfs wiki]:https://en.wikipedia.org/wiki/Depth-first_search "depth-first search wikipedia"
+[recursive wiki]:https://en.wikipedia.org/wiki/Recursion_(computer_science) "recursion wikipedia"
 [dfs order diagram]:https://upload.wikimedia.org/wikipedia/commons/1/1f/Depth-first-tree.svg "the order in which the nodes get traversed"
 [solved games]:https://en.wikipedia.org/wiki/Solved_game "solved games"
-[misere]:http://coolmathstuff123.blogspot.com/2013/09/anti-tic-tac-toe.html "blog about Misère Tic Tac Toe"
-[moon img]:http://www.wired.com/wp-content/uploads/images_blogs/wiredscience/2012/03/earthmoon_near_big.jpg "Earth and Moon"
-[my AI]:https://github.com/The-Ofek-Foundation/TicTacToe/blob/master/TicTacToe.java "Tic Tac Toe AI sample"
+[misere]:http://coolmathstuff123.blogspot.com/2013/09/anti-tic-tac-toe.html "blog about misère tic tac toe"
+[moon img]:http://www.wired.com/wp-content/uploads/images_blogs/wiredscience/2012/03/earthmoon_near_big.jpg "earth and moon"
+[my AI]:https://github.com/The-Ofek-Foundation/TicTacToe/blob/master/TicTacToe.java "tic tac toe AI sample"
