@@ -25,6 +25,28 @@ body {
     font-kerning: normal;
 }
 
+/**
+ * Buttons
+ */
+
+button {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    border: 0.1em solid black;
+    border-radius: 5px;
+}
+
+/**
+ * Inputs
+ */
+
+input {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    border: none;
+}
 
 
 /**

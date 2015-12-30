@@ -17,4 +17,7 @@
   <script>
     {% include we-blog.js %}
   </script>
+  {% if page.custom-script %}
+  <script src="{{site.baseurl}}/assets/{{page.title}}.js"></script>
+  {% endif %}
 </head>
