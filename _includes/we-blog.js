@@ -2,10 +2,9 @@ $(document).ready(function() {
 	$('.title-case').each(function() {
 		$(this).text(toTitleCase($(this).text()));
 	});
-
 	{% if page.new-tab-redirect %}
 	    $('.page-content').find('a').each(function() {
-	      if ((this.hostname || this.pathname) != "the-ofek-foundation.github.io" || this.attr("href").substring(0, "/blog/".length) != "/blog/")
+	      if ((this.hostname || this.pathname) != "{{site.url}}" || this.href.substring(0, "{{site.url}}{{site.baseurl}}".length) != "{{site.url}}{{site.baseurl}}")
 	        $(this).attr('target', '_blank');
 	    });
     {% endif %}
