@@ -4,7 +4,7 @@ $(document).ready(function() {
 	});
 	{% if page.new-tab-redirect %}
 	    $('.page-content').find('a').each(function() {
-	      if ((this.hostname || this.pathname) != "{{site.url}}" || this.href.substring(0, "{{site.url}}{{site.baseurl}}".length) != "{{site.url}}{{site.baseurl}}")
+	      if (this.href.substring(0, "{{site.url}}{{site.baseurl}}".length) != "{{site.url}}{{site.baseurl}}")
 	        $(this).attr('target', '_blank');
 	    });
     {% endif %}
