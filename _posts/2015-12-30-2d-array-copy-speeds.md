@@ -108,9 +108,12 @@ Now for the moment you have all been waiting for -- the speed tests! Generate 10
 
 <br />
 
+The exact code for these tests can be found [here][code for tests].
+
 **Thanks for reading, and *never use jQuery to deep copy!!!***
 
 [My Connect Four AI]:/ConnectOfek "my connect four ai"
 [MCTS wiki]:https://en.wikipedia.org/wiki/Monte_Carlo_tree_search "monte carlo tree search wikipedia"
 [deep copy wiki]:https://en.wikipedia.org/wiki/Object_copying#Deep_copy "deep copy wikipedia"
 [shallow copy wiki]:https://en.wikipedia.org/wiki/Object_copying#Shallow_copy "shallow copy wikipedia"
+[code for tests]:{{site.baseurl}}/assets/{{page.title}}.js
