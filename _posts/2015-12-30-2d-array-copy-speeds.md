@@ -59,11 +59,11 @@ You can test the speeds of these methods below.
 
   ***Note that this example is specifically for a standard 7 by 6 Connect Four board. It is impositionsible to convert an array from 1D to 2D without knowing the length the 2D array should have.***
 
-  For MCTS, each node will store a 1D representation of the board that will be converted to 2D when it is being accessed. This is around as memory efficient as storing the arrays as JSON strings, but significantly faster -- as you will see below.
+  For MCTS, each node will store a 1D representation of the board that will be converted to 2D when it is being accessed. This is around as memory efficient as storing the arrays as JSON strings, but significantly faster—as you will see below.
 
 **4. Game-specific storage**
 
-  At the end of the day, I am doing this for game AIs. A common theme in game AIs is that usually the generic algorithms aren't the best -- game-specific functions will work better. For Connect Four, this means storing the positionition of the game as a string that contains the history of moves in the game with numbers corresponding to columns. For example, a positionition of "441" would mean that the 1st player played in the 4th column, the 2nd played on top of it, and the the 1st played in the 1st column. Such a string can be converted to a board as so (with 0 being empty, 1 being 1st player, and 2 being 2nd player):
+  At the end of the day, I am doing this for game AIs. A common theme in game AIs is that usually the generic algorithms aren't the best—game-specific functions will work better. For Connect Four, this means storing the positionition of the game as a string that contains the history of moves in the game with numbers corresponding to columns. For example, a positionition of "441" would mean that the 1st player played in the 4th column, the 2nd played on top of it, and the the 1st played in the 1st column. Such a string can be converted to a board as so (with 0 being empty, 1 being 1st player, and 2 being 2nd player):
 
   {% highlight javascript %}
   function reconstruct(position) {
@@ -90,11 +90,11 @@ You can test the speeds of these methods below.
   {% highlight javascript %}
   reconstruct(position);{% endhighlight %}given the position.
 
-  As you may have guessed, the MCTS would simply contain strings of the position that can be converted to boards. This method is much more space efficient than storing as JSON or 1D arrays, and is significantly faster when the board is not heavily filled. *This method becomes slower as the game goes on -- slightly slower than a 1D array* -- but for Connect Four the thinking in the start of the game is more important making this method preferable.
+  As you may have guessed, the MCTS would simply contain strings of the position that can be converted to boards. This method is much more space efficient than storing as JSON or 1D arrays, and is significantly faster when the board is not heavily filled. *This method becomes slower as the game goes on—slightly slower than a 1D array*—but for Connect Four the thinking in the start of the game is more important making this method preferable.
 
 ### Speed Tests
 
-Now for the moment you have all been waiting for -- the speed tests! Generate 1000 new Connect Four boards and use each method to deep copy the boards. Each method will have a limited amount of time to try to copy as much as it can. It is worth mentioning that these boards are a maximum of 25 moves into the game.
+Now for the moment you have all been waiting for—the speed tests! Generate 1000 new Connect Four boards and use each method to deep copy the boards. Each method will have a limited amount of time to try to copy as much as it can. It is worth mentioning that these boards are a maximum of 25 moves into the game.
 
 <button onclick="generate_boards()">Generate New Boards</button> <input id="generate-text" readonly>
 <br />
