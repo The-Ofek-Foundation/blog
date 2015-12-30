@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 2D Array Copy Speeds
-category: Efficiency
-subcategory: Arrays
+category: General Computer Programming
+subcategory: Efficiency
 new-tab-redirect: true
 comments: true
 custom-script: true
