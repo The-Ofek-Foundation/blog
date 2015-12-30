@@ -11,5 +11,7 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <script src="{{site.baseurl}}/assets/jquery-1.11.3.min.js"></script>
-  <script src="{{site.baseurl}}/assets/we-blog.js"></script>
+  <script>
+    {% include we-blog.js %}
+  </script>
 </head>

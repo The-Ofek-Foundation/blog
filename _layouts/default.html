@@ -36,16 +36,6 @@
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         {% endif %}
-        <script>
-          $(document).ready(function() {
-            {% if page.new-tab-redirect %}
-            $('.page-content').find('a').each(function() {
-              if ((this.hostname || this.pathname) != "the-ofek-foundation.github.io")
-                $(this).attr('target', '_blank');
-            });
-            {% endif %}
-          });
-        </script>
       </div>
     </div>
 
@@ -54,4 +44,3 @@
   </body>
 
 </html>
-
