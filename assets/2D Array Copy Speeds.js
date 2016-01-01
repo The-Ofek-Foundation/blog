@@ -105,7 +105,7 @@ function reconstruct(pos) {
       b[i][a] = 0;
   }
   for (i = 0; i < pos.length; i++) {
-    col = +pos.charAt(i);
+    col = parseInt(pos.charAt(i), 10);
     for (a = 6; a >= 0; a--)
       if (b[col][a] === 0) {
         b[col][a] = i % 2 === 0 ? 1:2;
