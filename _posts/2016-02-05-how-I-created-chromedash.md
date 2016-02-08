@@ -80,7 +80,7 @@ document.onkeypress = function(event) {
 
     Many websites that use editable divs also save the content of the websites on the cloud. Each time the user types a character, it updates the text on the cloud. Therefore, there may be no specific element that stores the text to target with the script.
 
-[my extension]:chrome.google.com/webstore/detail/chromedash/bbpiealmmbiefhppikadopbljoppcnoa "ChromeDash chrome extension"
+[my extension]:https://chrome.google.com/webstore/detail/chromedash/bbpiealmmbiefhppikadopbljoppcnoa "ChromeDash chrome extension"
 [wiki dashes]:https://en.wikipedia.org/wiki/Dashes "dashes wikipedia"
 [wiki greek]:https://en.wikipedia.org/wiki/Greek_alphabet "greek alphabet wikipedia"
 [wiki accents]:https://en.wikipedia.org/wiki/Diacritic
