@@ -57,7 +57,7 @@ You can test the speeds of these methods below.
     return oned;
   }{% endhighlight %}
 
-  ***Note that this example is specifically for a standard 7 by 6 Connect Four board. It is impositionsible to convert an array from 1D to 2D without knowing the length the 2D array should have.***
+  ***Note that this example is specifically for a standard 7 by 6 Connect Four board. It is impossible to convert an array from 1D to 2D without knowing the length the 2D array should have.***
 
   For MCTS, each node will store a 1D representation of the board that will be converted to 2D when it is being accessed. This is around as memory efficient as storing the arrays as JSON strings, but significantly faster—as you will see below.
 
