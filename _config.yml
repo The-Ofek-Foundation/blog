@@ -7,11 +7,11 @@
 
 # Site settings
 title: We Blog
-email: flamingo.ofek@gmail.com
+email: ofek@theofekfoundation.org
 description: > # this means to ignore newlines until "baseurl:"
   Welcome to my blog! Feel free to discuss anything!
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://theofekfoundation.org" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://blog.theofekfoundation.org" # the base hostname & protocol for your site
 # twitter_username:
 github_username:  ofekih
 
