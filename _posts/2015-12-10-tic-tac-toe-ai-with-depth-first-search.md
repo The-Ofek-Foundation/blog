@@ -25,7 +25,7 @@ For the game of Tic Tac Toe, consider the following method:
 
 This recursive method does the following:
 
-1. **Check if the game is over** -- if either player won or if the board is fully filled
+1. **Check if the game is over**—if either player won or if the board is fully filled
  - If so, return the result of the game
 
 2. **Iterate through all board squares**
@@ -52,7 +52,7 @@ To put it into comparison, if you were to move one hair-length, solve Tic Tac To
 
 <br />
 
-The moral of the story is: while depth-first search can be used to solve Tic Tac Toe, it ultimately fails for more complex games -- I doubt your Connect Four player would want to wait years for the computer to think. That's why AI's use algorithms such as minimax and Monte Carlo tree search to find good moves. While the moves they find are often not perfect, they can still be very good and, more importantly, be evaluated in just a few seconds.
+The moral of the story is: while depth-first search can be used to solve Tic Tac Toe, it ultimately fails for more complex games—I doubt your Connect Four player would want to wait years for the computer to think. That's why AI's use algorithms such as minimax and Monte Carlo tree search to find good moves. While the moves they find are often not perfect, they can still be very good and, more importantly, be evaluated in just a few seconds.
 
 If you want to check out my Connect Four AI (which boasts as much stronger than any other AI you'll find online), be sure to [check it out](/ConnectOfek/ "my Connect Four AI").
 

@@ -63,7 +63,7 @@ You can test the speeds of these methods below.
 
 **4. Game-specific storage**
 
-  At the end of the day, I am doing this for game AIs. A common theme in game AIs is that usually the generic algorithms aren't the best—game-specific functions will work better. For Connect Four, this means storing the positionition of the game as a string that contains the history of moves in the game with numbers corresponding to columns. For example, a positionition of "441" would mean that the 1st player played in the 4th column, the 2nd played on top of it, and the the 1st played in the 1st column. Such a string can be converted to a board as so (with 0 being empty, 1 being 1st player, and 2 being 2nd player):
+  At the end of the day, I am doing this for game AIs. A common theme in game AIs is that usually the generic algorithms aren't the best—game-specific functions will work better. For Connect Four, this means storing the position of the game as a string that contains the history of moves in the game with numbers corresponding to columns. For example, a position of "441" would mean that the 1st player played in the 4th column, the 2nd played on top of it, and the the 1st played in the 1st column. Such a string can be converted to a board as so (with 0 being empty, 1 being 1st player, and 2 being 2nd player):
 
   {% highlight javascript %}
   function reconstruct(position) {

@@ -16,7 +16,7 @@ If you all remember from the [last post], we used [depth-first search][dfs wiki]
 1. We didn't need to store or create a game tree of any sort
 2. We only had to detect wins and losses (This will become clearer after learning other algorithms)
 
-However, it's major flaw made it impractical for even slightly more complex games -- It's complexity increases **exponentially** with both the [branching factor] and the depth, making it take literally *years* to run for Connect Four on a normal computer.
+However, it's major flaw made it impractical for even slightly more complex games—It's complexity increases **exponentially** with both the [branching factor] and the depth, making it take literally *years* to run for Connect Four on a normal computer.
 
 ### Minimax
 
@@ -69,13 +69,13 @@ For Gomoku, this may be implemented in a similar method:
 
 As you can see, this function takes the number consecutive, number of open ends, and turn into account. It gives much more points to a 4 with open ends when it is your turn than when it isn't. Also notice how it gives 0 points to any shape that has no open ends. The weights for such a function are in practice chosen empirically.
 
-There is still another major piece missing however -- the means of finding all the sets and passing them to the set-scoring function. Consider the following implementation for counting horizontal sets:
+There is still another major piece missing however—the means of finding all the sets and passing them to the set-scoring function. Consider the following implementation for counting horizontal sets:
 
 {% highlight javascript %}
 {% include assets/gomoku-total-shapes.js %}
 {% endhighlight %}
 
-Of course, this is just one possible implementation, and is in no way the fastest. In addition, it only analyzes for black, and horizontally -- a real implementation should be able to handle both colors and in all directions. **You would subtract or divide the points of one player by the points of the other**. However, this function should still give you an idea on the kind of function that is required for summing up all the sets.
+Of course, this is just one possible implementation, and is in no way the fastest. In addition, it only analyzes for black, and horizontally—a real implementation should be able to handle both colors and in all directions. **You would subtract or divide the points of one player by the points of the other**. However, this function should still give you an idea on the kind of function that is required for summing up all the sets.
 
 Now that we can build our analysis function, we still need to use a minimax algorithm to implement it. As a quick refresher, the idea is similar to depth-first search in that we go branch by branch having each player try to maximize their outcome. However, instead of going all the way to the end of the game, we cut the function off at a specific depth, and use our analysis function to tell how good that position is.
 
@@ -90,7 +90,7 @@ The children to be analyzed would be:
 
 Note that during your analysis, you **assume it is your opponent's turn**, *not your turn*! This will make the third child be clearly the most favorable, since in all other children, X has a two in a row with an open space (since it will also be their turn, your analysis function could give that a very high score). In this manor, you have successfully blocked their win.
 
-Improving this is easy. We are currently only looking at a depth of 1, or of 1 [ply] (plies are used to indicate depth -- five 'plies' means five turns deep). We could make our AI much stronger by looking at a depth of two plies, consisting of one of your moves and one of their responses (reply). This explains the name 'Minimax', *while you are trying to maximize your points, your opponent is trying to minimize your points* -- out of all the possible minimizes you opponents can make in their replies, you chose the maximum, most favorable one for you, and play the corresponding move. You try to make the maximum out of your opponent's minimums. Of course, increasing the depth past two plies is trivial, as you just need to do more of the same thing.
+Improving this is easy. We are currently only looking at a depth of 1, or of 1 [ply] (plies are used to indicate depth—five 'plies' means five turns deep). We could make our AI much stronger by looking at a depth of two plies, consisting of one of your moves and one of their responses (reply). This explains the name 'Minimax', *while you are trying to maximize your points, your opponent is trying to minimize your points*—out of all the possible minimizes you opponents can make in their replies, you chose the maximum, most favorable one for you, and play the corresponding move. You try to make the maximum out of your opponent's minimums. Of course, increasing the depth past two plies is trivial, as you just need to do more of the same thing.
 
 Here is a very basic example of this in javascript:
 
