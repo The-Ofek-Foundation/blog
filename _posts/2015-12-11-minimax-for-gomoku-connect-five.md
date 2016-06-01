@@ -117,5 +117,5 @@ You can build a pretty reasonable AI using this pure minimax algorithm, though t
 [c4]:{{site.baseurl}}/assets/tic-tac-toe-analyze-c4.png "child 4"
 [ply]:https://en.wikipedia.org/wiki/Ply_(game_theory) "ply wikipedia"
 [alpha-beta pruning]:https://en.wikipedia.org/wiki/Alpha–beta_pruning "alpha-beta pruning"
-[Gomoku AI]:/Online-Go/ "gomoku AI"
+[Gomoku AI]:http://www.theofekfoundation.org/games/OnlineGo/ "gomoku AI"
 [minimax improvements post]:{{site.baseurl}}/artificial%20intelligence/2015/12/18/minimax-improvements.html
