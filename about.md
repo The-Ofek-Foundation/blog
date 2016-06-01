@@ -13,9 +13,9 @@ I've coded many programs in Java, including [Old Snakey], a [Maze Generator], [G
 
 Recently I switched from Java to Javascript, so that my projects could be viewed by anyone on any device (although most of my projects are still funky on mobile devices). I also started becoming interested in Computer AIs for zero-sum games, such as [minimax][Minimax Wiki] and [Monte Carlo][Monte Carlo tree search] methods.
 
-All my knowledge in Artificial Intellegence is self taught, *I don't claim to be an expert*, although my current AI's for games are generally very powerful, especially [my Connect Four program](/ConnectOfek/) that uses a Monte Carlo tree search.
+All my knowledge in Artificial Intellegence is self taught, *I don't claim to be an expert*, although my current AI's for games are generally very powerful, especially [my Connect Four program](http://www.theofekfoundation.org/games/ConnectFour/) that uses a Monte Carlo tree search.
 
-**Be sure to check out [my website](/)!**
+**Be sure to check out [my website](http://www.theofekfoundation.org)!**
 
 ![My Photo]
 
