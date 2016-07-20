@@ -1,8 +1,8 @@
 ---
 layout: default
 title: How I Created ChromeDash
-category: Google Development
-subcategory: Extensions
+category: google-development
+subcategory: extensions
 new-tab-redirect: true
 comments: true
 ---
