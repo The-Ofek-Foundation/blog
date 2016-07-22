@@ -19,3 +19,4 @@ github_username:  ofekih
 markdown: kramdown
 gems:
   - jekyll-sitemap
+permalink: pretty
