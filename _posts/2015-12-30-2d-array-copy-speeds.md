@@ -18,6 +18,20 @@ When creating [my AI for Connect Four][My Connect Four AI] using the [Monte Carl
 
 You can test the speeds of these methods below.
 
+**EDIT:** Sorry, my spoon count for this blog is incredible, I skipped the easiest way to copy, just creating a new array with equal dimensions and populating it with the previous array. As an example:
+
+{% highlight javascript %}
+function simple_copy(board) {
+  let simple_copy = new Array(board.length);
+  for (let i = 0; i < board.length; i++) {
+    simple_copy[i] = new Array(board[i].length);
+    for (let a = 0; a < simple_copy[i].length; a++)
+      simple_copy[i][a] = board[i][a];
+  }
+  return simple_copy;
+}
+{% endhighlight %}
+
 **1. jQuery extend**
 
   jQuery provides its own way to deep copy objects that can be applied to arrays as follows:
@@ -105,6 +119,7 @@ Now for the moment you have all been waiting for—the speed tests! Generate 100
 <div id="JSON-time">JSON Copies: </div>
 <div id="dimension-change-time">Dimension Change Copies: </div>
 <div id="reconstruct-time">Reconstruction Copies: </div>
+<div id="simple-copy-time">Simple Copy Copies: </div>
 
 <br />
 
