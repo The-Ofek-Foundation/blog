@@ -74,11 +74,13 @@ document.onkeypress = function(event) {
 
 1. **Websites that Block Content Scripts**
 
-    This is pretty self-explanitory. Some websites, mainly those by Google, simply block content scripts from running, so the extension cannot load.
+    This is pretty self-explanitory. Some websites simply block content scripts from running, so the extension cannot load.
 
 2. **Editable Divs**
 
     Many websites that use editable divs also save the content of the websites on the cloud. Each time the user types a character, it updates the text on the cloud. Therefore, there may be no specific element that stores the text to target with the script.
+
+Feel free to add the extension to chrome if you're interested! <button>Add Extention</button>
 
 [my extension]:https://chrome.google.com/webstore/detail/chromedash/bbpiealmmbiefhppikadopbljoppcnoa "ChromeDash chrome extension"
 [wiki dashes]:https://en.wikipedia.org/wiki/Dashes "dashes wikipedia"
