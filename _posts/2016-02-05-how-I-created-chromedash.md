@@ -5,7 +5,7 @@ category: google-development
 subcategory: extensions
 new-tab-redirect: true
 comments: true
-custom-script: true
+custom-script: false
 custom-style: true
 custom-style-rel: chrome-webstore-item
 custom-style-src: https://chrome.google.com/webstore/detail/bbpiealmmbiefhppikadopbljoppcnoa
@@ -84,7 +84,7 @@ document.onkeypress = function(event) {
 
     Many websites that use editable divs also save the content of the websites on the cloud. Each time the user types a character, it updates the text on the cloud. Therefore, there may be no specific element that stores the text to target with the script.
 
-Feel free to add the extension to chrome if you're interested! <button id="add-extension">Add to Chrome</button>
+Feel free to add the extension to chrome if you're interested! <button onclick="chrome.webstore.install();">Add to Chrome</button>
 
 
 [my extension]:https://chrome.google.com/webstore/detail/chromedash/bbpiealmmbiefhppikadopbljoppcnoa "ChromeDash chrome extension"
