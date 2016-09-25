@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+	{% include head.html %}
 
-  <body>
+	<body>
 
-    {% include header.html %}
+		{% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {% if page.comments %}
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-        <script>
-            /**
-             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-             */
+		<div class="page-content">
+			<div class="wrapper">
+				{% if page.comments %}
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<script src="https://apis.google.com/js/plusone.js"></script>
+				<script>
+					gapi.comments.render('comments', {
+							href: window.location,
+							width: '624',
+							first_party_property: 'BLOGGER',
+							view_type: 'FILTERED_POSTMOD'
+					});
+				</script>
+				<script>
+						/**
+						 *	RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						 *	LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+						 */
 
-            var disqus_config = function () {
-                this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = window.location.href; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                this.page.title = "{{page.title}}";
-            };
+						var disqus_config = function () {
+								this.page.url = window.location.href;	// Replace PAGE_URL with your page's canonical URL variable
+								this.page.identifier = window.location.href; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+								this.page.title = "{{page.title}}";
+						};
 
-            (function() {  // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
+						(function() {	// DON'T EDIT BELOW THIS LINE
+								var d = document, s = d.createElement('script');
 
-                s.src = '//the-ofek-foundation.disqus.com/embed.js';
+								s.src = '//the-ofek-foundation.disqus.com/embed.js';
 
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        {% endif %}
+								s.setAttribute('data-timestamp', +new Date());
+								(d.head || d.body).appendChild(s);
+						})();
+				</script>
+				{% endif %}
 
-        {{ content }}
+				{{ content }}
 
-        {% if page.comments %}
-        <div class="fb-like" data-href="{{site.url}}{{site.baseurl}}{{page.url}}" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
-        <br /><br />
-        <div id="disqus_thread"></div>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        {% endif %}
-      </div>
-    </div>
+				{% if page.comments %}
+				<div class="fb-like" data-href="{{site.url}}{{site.baseurl}}{{page.url}}" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+				<br /><br />
+				<div id="comments"></div>
 
-    {% include footer.html %}
+				{% endif %}
+			</div>
+		</div>
 
-  </body>
+		{% include footer.html %}
 
-  {% if page.custom-script %}
-  <script src="{{site.baseurl}}/assets/{{page.title}}.js"></script>
-  {% endif %}
+	</body>
+
+	{% if page.custom-script %}
+	<script src="{{site.baseurl}}/assets/{{page.title}}.js"></script>
+	{% endif %}
 
 </html>
