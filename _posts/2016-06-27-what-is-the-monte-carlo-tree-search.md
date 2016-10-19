@@ -295,8 +295,8 @@ And you're done! If you want any more help, you can check out [my github game Ja
 
 Let me know if I should clear up anything!
 
-[my uttt]:http://www.theofekfoundation.org/games/UltimateTicTacToe "my ultimate tic tac toe ai"
-[my connect four]:http://www.theofekfoundation.org/games/ConnectFour "my connect four ai"
+[my uttt]:https://www.theofekfoundation.org/games/UltimateTicTacToe "my ultimate tic tac toe ai"
+[my connect four]:https://www.theofekfoundation.org/games/ConnectFour "my connect four ai"
 [monte carlo ts wiki]:https://en.wikipedia.org/wiki/Monte_Carlo_tree_search "monte carlo tree search wiki"
 [uttt math with bad drawings]:https://mathwithbaddrawings.com/2013/06/16/ultimate-tic-tac-toe/ "game rules and explanation"
 [dfs post]:{{site.baseurl}}/artificial%20intelligence/2015/12/10/tic-tac-toe-ai-with-depth-first-search.html "depth-first search post"
