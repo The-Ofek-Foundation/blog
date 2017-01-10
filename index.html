@@ -14,6 +14,7 @@ comments: true
         {% for category in site.data.categories %}
           {% if tag[0] == category.slug %}
             {{ category.name }}
+            {% break %}
           {% endif %}
         {% endfor %}
         <span>- {{ tag[1].size }}</span>
@@ -26,6 +27,7 @@ comments: true
     {% for category in site.data.categories %}
       {% if tag[0] == category.slug %}
         <h2 id="{{ category.slug }}">{{ category.name }}</h2>
+        {% break %}
       {% endif %}
     {% endfor %}
     <ul class="post-list">
@@ -35,7 +37,14 @@ comments: true
           {% if group == null or group == post.group %}
           <li>
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<span class="entry-date"></a>
-            <span class="post-meta title-case">{{ post.date | date: "%b %-d, %Y" }} {{post.subcategory}}</span>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+              {% for subcategory in site.data.subcategories %}
+                {% if post.subcategory == subcategory.slug %}
+                  {{subcategory.name}}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            </span>
           </li>
           {% endif %}
         {% endif %}
