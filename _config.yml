@@ -19,6 +19,4 @@ github_username: ofekih
 
 # Build settings
 markdown: kramdown
-gems:
-  - jekyll-sitemap
 permalink: pretty
