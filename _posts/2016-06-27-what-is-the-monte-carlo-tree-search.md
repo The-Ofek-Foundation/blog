@@ -308,7 +308,7 @@ Let me know if I should clear up anything!
 [minimax for gomoku post]:{{site.baseurl}}/artificial%20intelligence/2015/12/11/minimax-for-gomoku-connect-five.html "minimax for gomoku post"
 [monte carlo wiki]:https://en.wikipedia.org/wiki/Monte_Carlo_method "monte carlo method wiki"
 [mc pi]:https://curiosity-driven.org/pi-approximation "monte carlo pi approximation"
-[beej mc]:http://beej.us/blog/data/monte-carlo-method-game-ai/ "monte carlo for games article"
+[beej mc]:https://beej.us/blog/data/monte-carlo-method-game-ai/ "monte carlo for games article"
 [search tree wiki]:https://en.wikipedia.org/wiki/Search_tree "search tree wiki"
 [wiki trees]:https://en.wikipedia.org/wiki/Tree_(data_structure)#Terminologies_used_in_Trees "tree data structure wiki"
 [deep learning wiki]:https://en.wikipedia.org/wiki/Deep_learning "deep learning wiki"

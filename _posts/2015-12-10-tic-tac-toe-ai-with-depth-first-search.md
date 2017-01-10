@@ -64,6 +64,6 @@ If you have any questions, advice, or feedback at all, feel free to leave a comm
 [recursive wiki]:https://en.wikipedia.org/wiki/Recursion_(computer_science) "recursion wikipedia"
 [dfs order diagram]:https://upload.wikimedia.org/wikipedia/commons/1/1f/Depth-first-tree.svg "the order in which the nodes get traversed"
 [solved games]:https://en.wikipedia.org/wiki/Solved_game "solved games"
-[misere]:http://coolmathstuff123.blogspot.com/2013/09/anti-tic-tac-toe.html "blog about misère tic tac toe"
-[moon img]:http://www.wired.com/wp-content/uploads/images_blogs/wiredscience/2012/03/earthmoon_near_big.jpg "earth and moon"
+[misere]:https://coolmathstuff123.blogspot.com/2013/09/anti-tic-tac-toe.html "blog about misère tic tac toe"
+[moon img]:https://www.wired.com/wp-content/uploads/images_blogs/wiredscience/2012/03/earthmoon_near_big.jpg "earth and moon"
 [my AI]:https://github.com/The-Ofek-Foundation/TicTacToe/blob/master/TicTacToe.java "tic tac toe AI sample"

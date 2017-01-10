@@ -52,8 +52,8 @@ You followed the above guide and/or practiced well for this test? Great! Relax, 
 
 &mdash; [Ofek Gila][perfect test score]
 
-[amazon book search]:http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dstripbooks&field-keywords=Be+Prepared+for+the+AP+Computer+Science+Exam+in+Java+Litvin&rh=n%3A283155%2Ck%3ABe+Prepared+for+the+AP+Computer+Science+Exam+in+Java+Litvin "find on amazon"
+[amazon book search]:https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dstripbooks&field-keywords=Be+Prepared+for+the+AP+Computer+Science+Exam+in+Java+Litvin&rh=n%3A283155%2Ck%3ABe+Prepared+for+the+AP+Computer+Science+Exam+in+Java+Litvin "find on amazon"
 [AP Computer Science Principles]:https://advancesinap.collegeboard.org/stem/computer-science-principles "new AP test"
-[Stack Overflow]:http://stackoverflow.com/ "stack overflow"
+[Stack Overflow]:https://stackoverflow.com/ "stack overflow"
 [hard vs soft coding]:http://www.thoughtclusters.com/2007/08/hard-coding-and-soft-coding/ "hard vs soft coding"
-[perfect test score]:http://www.mercurynews.com/cupertino/ci_29476428/cupertino-schools-fourteen-students-from-fremont-union-high "my credentials"
+[perfect test score]:https://www.mercurynews.com/cupertino/ci_29476428/cupertino-schools-fourteen-students-from-fremont-union-high "my credentials"
