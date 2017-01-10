@@ -61,5 +61,5 @@ Leave feedback and/or improvements please!
 [zero-sum game wiki]:https://en.wikipedia.org/wiki/Zero-sum_game "zero-sum games wikipedia"
 [branching factor]:https://en.wikipedia.org/wiki/Branching_factor "branching factor wikipedia"
 [alpha-beta pruning]:https://en.wikipedia.org/wiki/Alpha–beta_pruning "alpha-beta pruning"
-[alpha beta diagram]:{{site.baseurl}}/assets/AB_pruning.svg "alpha-beta diagram"
+[alpha beta diagram]:https://upload.wikimedia.org/wikipedia/commons/9/91/AB_pruning.svg "alpha-beta diagram"
 [Go]:https://en.wikipedia.org/wiki/Go_(game) "go board game wikipedia"
