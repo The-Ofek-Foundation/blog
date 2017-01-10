@@ -25,7 +25,7 @@ comments: true
   {% for tag in site.categories %}
     {% for category in site.data.categories %}
       {% if tag[0] == category.slug %}
-        <h2 id="{{ category.name }}">{{ category.name }}</h2>
+        <h2 id="{{ category.slug }}">{{ category.name }}</h2>
       {% endif %}
     {% endfor %}
     <ul class="post-list">
