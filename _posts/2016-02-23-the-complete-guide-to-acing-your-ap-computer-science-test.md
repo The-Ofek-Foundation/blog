@@ -1,10 +1,7 @@
 ---
-layout: default
 title: The Complete Guide to Acing your AP Computer Science Test
 category: general-computer-programming
 subcategory: test-taking
-new-tab-redirect: true
-comments: true
 ---
 
 ## The Complete Guide to Acing your AP Computer Science (A)  Test

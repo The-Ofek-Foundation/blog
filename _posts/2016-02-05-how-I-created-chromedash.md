@@ -1,10 +1,7 @@
 ---
-layout: default
 title: How I Created ChromeDash
 category: google-development
 subcategory: extensions
-new-tab-redirect: true
-comments: true
 custom-script: false
 custom-style: true
 custom-style-rel: chrome-webstore-item

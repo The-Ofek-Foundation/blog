@@ -1,11 +1,8 @@
 ---
-layout: default
 title: 2D Array Copy Speeds
 category: general-computer-programming
 subcategory: efficiency
 new-tab-redirect: true
-comments: true
-custom-script: true
 ---
 
 ## {{page.title}}

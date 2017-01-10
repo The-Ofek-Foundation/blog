@@ -1,10 +1,7 @@
 ---
-layout: default
 title: Minimax for Gomoku (Connect Five)
 category: artificial-intelligence
 subcategory: minimax
-new-tab-redirect: true
-comments: true
 ---
 
 ## Minimax for Gomoku (Connect Five)

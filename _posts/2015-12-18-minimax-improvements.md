@@ -1,10 +1,7 @@
 ---
-layout: default
 title: Minimax Improvements
 category: artificial-intelligence
 subcategory: minimax
-new-tab-redirect: true
-comments: true
 ---
 
 ## Minimax Improvements

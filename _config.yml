@@ -20,3 +20,13 @@ github_username: ofekih
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: default
+      new-tab-redirect: true
+      comments: true

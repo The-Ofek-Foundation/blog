@@ -1,10 +1,7 @@
 ---
-layout: default
 title: What is the Monte Carlo tree search?
 category: artificial-intelligence
 subcategory: monte-carlo-tree-search
-new-tab-redirect: true
-comments: true
 ---
 
 ## What is the Monte Carlo tree search?
