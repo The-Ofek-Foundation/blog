@@ -9,30 +9,35 @@ comments: true
 
   <ul class="tag-box inline">
   {% assign tags_list = site.categories %}
-    {% if tags_list.first[0] == null %}
-      {% for tag in tags_list %}
-        <a href="#{{ tag }}"><li class="title-case unhyphenate">{{ tag }} <span>- {{ site.tags[tag].size }}</span></li></a>
-      {% endfor %}
-    {% else %}
-      {% for tag in tags_list %}
-        <a href="#{{ tag[0] }}"><li class="title-case unhyphenate">{{ tag[0] }} <span>- {{ tag[1].size }}</span></li></a>
-      {% endfor %}
-    {% endif %}
+    {% for tag in tags_list %}
+      <a href="#{{ tag[0] }}"><li>
+        {% for category in site.data.categories %}
+          {% if tag[0] == category.slug %}
+            {{ category.name }}
+          {% endif %}
+        {% endfor %}
+        <span>- {{ tag[1].size }}</span>
+      </li></a>
+    {% endfor %}
   {% assign tags_list = nil %}
   </ul>
 
   {% for tag in site.categories %}
-    <h2 class="title-case unhyphenate" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+    {% for category in site.data.categories %}
+      {% if tag[0] == category.slug %}
+        <h2 id="{{ category.name }}">{{ category.name }}</h2>
+      {% endif %}
+    {% endfor %}
     <ul class="post-list">
       {% assign pages_list = tag[1] %}
       {% for post in pages_list %}
         {% if post.title != null %}
-        {% if group == null or group == post.group %}
-        <li>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<span class="entry-date"></a>
-          <span class="post-meta title-case">{{ post.date | date: "%b %-d, %Y" }} {{post.subcategory}}</span>
-        </li>
-        {% endif %}
+          {% if group == null or group == post.group %}
+          <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<span class="entry-date"></a>
+            <span class="post-meta title-case">{{ post.date | date: "%b %-d, %Y" }} {{post.subcategory}}</span>
+          </li>
+          {% endif %}
         {% endif %}
       {% endfor %}
       {% assign pages_list = nil %}
