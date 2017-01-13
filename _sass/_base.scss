@@ -104,7 +104,28 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2.15em;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 0.85em;
 }
 
 
@@ -159,6 +180,7 @@ code {
 
 code {
     padding: 1px 5px;
+    font-family: $code-font-family;
 }
 
 pre {
@@ -172,6 +194,9 @@ pre {
     }
 }
 
+tt {
+    font-size: 1.25em;
+}
 
 
 /**

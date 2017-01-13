@@ -6,15 +6,18 @@
 
 
 // Our variables
-$base-font-family: serif;
+$base-font-family: 'PT Sans', sans-serif;
+$heading-font-family: 'Source Sans Pro', sans-serif;
+$code-font-family: 'Source Code Pro', monospace;
 $base-font-size:   1.32em;
 $base-font-weight: 400;
+$heading-font-weight: 300;
 $small-font-size:  $base-font-size * 0.5;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #3f3f3f;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
