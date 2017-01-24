@@ -3,6 +3,7 @@ title: 2D Array Copy Speeds
 category: general-computer-programming
 subcategory: efficiency
 new-tab-redirect: true
+custom-script: true
 ---
 
 ## {{page.title}}

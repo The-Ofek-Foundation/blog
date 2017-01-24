@@ -1,9 +1,5 @@
 let boards;
 
-$(document).ready(function() {
-	generate_boards();
-});
-
 function generate_boards() {
 	$("#generate-text").val("Generating...");
 	setTimeout(function() {
