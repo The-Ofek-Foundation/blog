@@ -20,6 +20,8 @@ github_username: ofekih
 # Build settings
 markdown: kramdown
 permalink: pretty
+sass:
+  style: compressed
 
 defaults:
   -
