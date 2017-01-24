@@ -12,3 +12,5 @@
   name: Efficiency
 - slug: extensions
   name: Extensions
+- slug: java
+  name: Java
