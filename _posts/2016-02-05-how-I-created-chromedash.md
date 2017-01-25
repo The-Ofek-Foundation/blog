@@ -33,43 +33,19 @@ The most basic functionality of a word or string aliaser is the ability to detec
 3. **Detecting the Alias from the Last Key Pressed**
 
   In the event listener—document.onkeypress or $(document).keypress for jQuery—with every key that is pressed, extract the corresponding letter. This can be down as follows:
-
-{% highlight javascript %}
-document.onkeypress = function(event) {
-  event = event || window.event;
-    var charCode = event.keyCode || event.which;
-    var charString = String.fromCharCode(charCode);
-    ...
-}{% endhighlight %}
+  {% gist 2d1cfbca72ce73cecbd05204d3426903 %}
 
 Now you must check if you the letter typed would complete an alias. To do this, **you must find the index of the caret.** This can be done for inputs and textareas as shown [here][get caret position value], and for others as shown [here][get caret position]. Save a local variable with the text of the element plus the letter that was just typed in the caret index. Then iterate through your list of aliases and check if any alias matches the corresponding substring of the current text.
 
 For example, if your string was "Hello_Ofek! what is up?" with the caret right after Ofek, and you wanted to check if the alias "cookie" was just typed, you would compare "cookie" with "o_Ofek" for equality.
 
 Here's a quick sample of the flow:
-
-{% highlight javascript %}
-document.onkeypress = function(event) {
-  ...
-    var curr_index = doGetCaretPosition(active_element);
-    var next_str = current_string.substring(0, curr_index) + charString + current_string.substring(curr_index);
-    var matching_alias = get_matching_alias(next_str, curr_index + 1); // adding one to take into account that you just added a letter
-    ...
-}{% endhighlight %}
+{% gist 48a80a16a1643839f93ceba99db3818b %}
 
 4. **Replacing the Alias in the Element**
 
 After you find the alias, replace the text in the string with that of the alias, update the content of the element, prevent the pressed character from being added to the new string and set the new caret position. Setting a a caret position can be done like [this][set caret position value] for inputs and textareas, and like [this][set caret position] for others. Here is an example of how to do that:
-
-{% highlight javascript %}
-document.onkeypress = function(event) {
-  ...
-    matching_alias = ...
-    aliases_to = ...
-    current_str = current_str.substring(0, curr_index - matching_alias.length - 1) + aliases_to + current_str.substring(curr_index);
-  set_text_in_element{active_element, current_str);
-    setCaretPosition(active_element, curr_index + aliases_to.length - matching_alias.length - 1);
-}{% endhighlight %}
+{% gist e20fd845c3b7b8e7eaafe0ae204ab2f5 %}
 
 ### Problems with the Extension
 
