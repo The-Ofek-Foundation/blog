@@ -10,16 +10,7 @@ A majority of these styles are based off [Google's Java Style Guide][google java
 
 ### Source File
 **No wildcard imports**. Other than that, order the statements however you think makes the most sense. Empty lines between imports to separate similar statements are okay. You can even place comments here if you feel it is necessary (more on comments later).
-
-```java
-import java.util.Arrays;
-import java.util.Scanner;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-```
-
+{% gist fd77420962eef5f6da1d7f294794d265 %}
 **One top-level class per file**. Nested classes are okay, but other than that, each class should be in its own .java file. If you're finding it hard to switch between files, considering using a more competent text editor (I recommend sublimetext).
 
 Class names should be in UpperCamelCase.

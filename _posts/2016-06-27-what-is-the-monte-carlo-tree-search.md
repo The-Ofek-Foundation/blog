@@ -75,219 +75,21 @@ The Monte Carlo tree search has been used to create truly remarkable game AIs, f
 First of all, gain a basic understanding of search trees (you can use [Wikipedia][search tree wiki] to help out). Next. read the first part of the [wiki page][monte carlo ts wiki] explaining it to get a basic conceptual understanding. Now, let's go through the steps one-by-one, assuming you understand the fundamentals of search trees (using JavaScript as an example, but it should be easy to transfer to any language):
 
 First, let's create a generic object to represent a node:
-
-{% highlight javascript %}
-var MCTS_Node = function(State, parent) {
-  this.State = State; // The current state of the board
-  this.parent = parent;
-
-  // As explained in the wiki, the hits, misses, and total tries
-  // are used in the algorithm
-  this.hits = 0;
-  this.misses = 0;
-  this.total_tries = 0;
-};
-
-/**
-  * In order to be as generic as possible,
-  * I moved the current state of the board
-  * to its own class.
-  **/
-var State = function(board, turn) {
-  this.board = board;
-  this.last_move;
-  this.turn = turn;
-};
-{% endhighlight %}
-
+{% gist 322df8fdd9adac269d4da1208ac0867c %}
 That was the easy part. Now, we need to create the backbone of the algorithm, the part that chooses which child node to run a simulation with:
-
-{% highlight javascript %}
-/** This function propagates to a leaf node and runs
-  * a simulation at it.
-  **/
-MCTS_Node.prototype.choose_child = function() {
-
-  // If the node doesn't have children defined yet,
-  // create them (the get_children function will be
-  // game specific.
-  if (!this.children)
-    this.children = get_children(this.State, this);
-
-  // If the node is a leaf node, run a simulation
-  // at it and back-propogate the results
-  if (this.children.length === 0)
-    this.run_simulation();
-
-  else {
-    // Get all the unexplored children (if any)
-    let unexplored = [];
-    for (let i = 0; i < this.children.length; i++)
-      if (this.children[i].total_tries === 0)
-        unexplored.push(this.children[i]);
-
-    // If there are any unexplored children,
-    // pick one at random and run with it.
-    if (unexplored.length > 0)
-      unexplored[Math.floor(Math.random() * unexplored.length)].run_simulation();
-    else {
-
-     // Find the best child (using the wiki-described
-     // algorithm that I'll demo later) and recursively
-     // call this function in it.
-      let best_child = this.children[0], best_potential = child_potential(this, this.children[0]), potential;
-      for (let i = 1; i < this.children.length; i++) {
-        potential = child_potential(this, this.children[i]);
-        if (potential > best_potential) {
-          best_potential = potential;
-          best_child = this.children[i];
-        }
-      }
-      best_child.choose_child();
-    }
-  }
-};
-{% endhighlight %}
-
+{% gist 6f61e2c2961b541060a75f214306de64 %}
 You might notice that this function calls a few functions that weren't mentioned yet, but you'll probably have some kind of understanding of them having read the wiki article. I'll start by covering the simplest one first. If you notice a lack of explanation here, that's because this is nearly identical to Wikipedia's [exploration vs exploitation section][wiki exploration vs exploitation]:
-
-{% highlight javascript %}
-/** This function returns the 'child potential'
-  * for any given node, following the Wikipedia
-  * "exploration and exploitation" principle.
-  **/
-function child_potential(parent, child) {
-  /** Assuming that the turn changes with every
-    * move, the number of wins should be child.misses
-    * (the number of times the opponent/next player
-    * loses). However, I noticed that this works better
-    * if also the wins are taken into account. For the
-    * pure implementation, let w = child.misses;
-    **/
-  let w = child.misses - child.hits;
-  let n = child.total_tries;
-  var c = Math.sqrt(2); // This constant is typically found empirically
-  var t = parent.total_tries;
-
-  return w / n  +  c * Math.sqrt(Math.log(t) / n);
-};
-{% endhighlight %}
-
+{% gist 0f814cf2a8fe47040390064f7106cfd6 %}
 While we're at it, let's get done with the very simple and generic algorithms first:
-
-{% highlight javascript %}
-/** Run the simulation at the current board state,
-  * and then back propagate the results to the
-  * root of the tree.
-  **/
-MCTS_Node.prototype.run_simulation = function() {
-  this.back_propagate(simulate(this.State));
-};
-
-MCTS_Node.prototype.back_propagate = function(simulation) {
-  if (simulation > 0)
-    this.hits++;
-  else if (simulation < 0)
-    this.misses++;
-  this.total_tries++;
-
-  /** Assuming that the previous turn was by the opponent,
-    * flip the signs of the simulation result while back
-    * propagating. If it wasn't, then leave the sign of
-    * the simulation the same.
-    **/
-  if (this.parent)
-    this.parent.back_propagate(-simulation);
-};
-{% endhighlight %}
-
+{% gist 54459687152b24b2c702b4b1c8d71fce %}
 Now that the framework is done, let's get to the more game-specific functions. Let's start with the function that gets all the possible children of a given position:
+{% gist 8f91548f73ec68ad2a28ee43e240f305 %}
+(Note that the simpleCopy function was taken from [this blog post][simple copy blog post]).
 
-{% highlight javascript %}
-// Returns all the possible moves from a given state
-function get_possible_moves(state) {
-  let possible_moves = [];
-
-  // Assuming a 2d board
-
-  for (let i = 0; i < state.board.length; i++)
-    for (let a = 0; a < state.board[i].length; a++)
-
-      // legal_move returns true if the move is legal
-      // with the given state.
-      if (legal_move(state, [i, a]))
-        possible_moves.push([i, a]);
-  return possible_moves;
-}
-
-function get_children(state, parent) {
-  let temp_board = state.board.slice(0),
-    turn = state.turn,
-    possible_moves = get_possible_moves(state),
-    possible_children = new Array(possible_moves.length);
-
-  for (let i = 0; i < possible_children.length; i++) {
-    temp_board = play_move(temp_board, possible_moves[i]);
-
-    possible_children[i] = new MCTS_Node(new State(temp_board, !turn, possible_moves[i]), parent);
-
-    temp_board = state.board.slice(0);
-  }
-
-  return possible_children;
-
-  /** In other words, return an array of all possible
-    * children nodes from the given position.
-    **/
-}
-{% endhighlight %}
-
-Assuming you got that, let's move on to the random simulation function:
-
-{% highlight javascript %}
-// I found this easiest to implement with an
-// initializing function calling a recursive function,
-// to avoid overriding the original state.
-function simulate(state) {
-  let temp_state = JSON.parse(JSON.stringify(state)),
-    possible_moves = get_possible_moves(temp_state);
-
-  // Using the same play_move function as used in the
-  // get_children function, advance the board position.
-  temp_state.board = play_move(temp_state.board, possible_moves[Math.floor(Math.random() * possible_moves.length)]);
-
-  // Assuming the other player plays next...
-  temp_state.turn = !temp_state.turn;
-
-  // Starts simulating a game recursively with a random move.
-  return simulate_game(temp_state, temp_state.turn);
-}
-
-function simulate_recursive(temp_state, initial_turn) {
-
-  // Return the result of the game if it is over.
-  if (game_over(temp_state))
-    // If the winner is the player that the simulation started on,
-    // great. If not, flip the result to match.
-    return game_result(temp_state) * (temp_state.turn === initial_turn ? 1:-1);
-
-  let possible_moves = get_possible_moves(temp_state);
-
-  temp_state.board = play_move(temp_state.board, possible_moves[Math.floor(Math.random() * possible_moves.length)]);
-  temp_state.turn = !temp_state.turn;
-
-  return simulate_recursive(temp_state, initial_turn);
-}
-{% endhighlight %}
-
+Assuming you understand that, let's move on to the random simulation function:
+{% gist 9d70d9b4ad58f616bd374691193e31f7 %}
 And last but not least (after you finishing coding all the game-specific helper methods), you need a function to create the root node. That's refreshingly simple:
-
-{% highlight javascript %}
-function create_MCTS_root() {
-  return new MCTS_Node(new State(board, global_turn, null), null);
-}
-{% endhighlight %}
-
+{% gist 6f14ef713d28a764efdf5a4e630e5117 %}
 And you're done! If you want any more help, you can check out [my github game JavaScript folder] to view my Mancala, Connect Four, and Ultimate Tic Tac Toe implementations, or simply comment below!
 
 Let me know if I should clear up anything!
@@ -315,3 +117,4 @@ Let me know if I should clear up anything!
 [alphago page]:https://deepmind.com/alpha-go "official alphago site"
 [wiki exploration vs exploitation]:https://en.wikipedia.org/wiki/Monte_Carlo_tree_search#Exploration_and_exploitation "wiki exploration vs exploitation"
 [my github game JavaScript folder]:https://github.com/The-Ofek-Foundation/theofekfoundation.org/tree/master/static/assets/javascript/games "my github game javascript folder"
+[simple copy blog post]:{{site.baseurl}}/general-computer-programming/2015/12/30/2d-array-copy-speeds/
