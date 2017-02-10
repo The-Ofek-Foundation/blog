@@ -111,8 +111,10 @@ The main *winding* was of the *normal* *~~lotus-o-delta~~* type...
 1. *nonreversible tremi pipe*: A tremie is a concrete placement method using a pipe. How a tremie pipe can be nonreversible, or what that even means, is beyond me.
 
 <div style="text-align: center;">
-	<img src="http://www.tremiepipe.com/images/a.jpg" title="a tremie pipe">
+	<img src="/assets/images/tremiepipe.jpg" title="a tremie pipe">
 </div>
+
+<br /><br />
 
 ...to the *differential* ~~girdlespring~~...
 
