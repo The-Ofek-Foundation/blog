@@ -114,7 +114,7 @@ The main *winding* was of the *normal* *~~lotus-o-delta~~* type...
 	<img src="/assets/images/tremiepipe.jpg" title="a tremie pipe">
 </div>
 
-<br /><br />
+<br />
 
 ...to the *differential* ~~girdlespring~~...
 
