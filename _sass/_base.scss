@@ -159,6 +159,7 @@ blockquote {
 	font-size: 18px;
 	letter-spacing: -1px;
 	font-style: italic;
+	font-size: $blockquote-font-size;
 
 	> :last-child {
 		margin-bottom: 0;
