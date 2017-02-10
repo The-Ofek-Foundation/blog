@@ -56,7 +56,7 @@ Basically, the only new principle involved is that instead of power being genera
 
 The original machine had a base-plate of **~~prefabulated~~** aluminite...
 
-1.**~~prefabulated~~**: To "fabulate" is to relate untrue or invented stories, basically to relate events as a fable. Prefabulated aluminite would therefore mean: aluminite that was already related to fake stories o_O
+1. **~~prefabulated~~**: To "fabulate" is to relate untrue or invented stories, basically to relate events as a fable. Prefabulated aluminite would therefore mean: aluminite that was already related to fake stories o_O
 2. aluminite: Aluminite is actually a thing! Although base plates are typically metallic, and aluminite is a crystal, this existing actually surprised me!
 
  ...surmounted by a **malleable** ***logarithmic casing***...
