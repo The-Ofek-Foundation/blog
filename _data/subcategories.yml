@@ -14,3 +14,5 @@
   name: Extensions
 - slug: java
   name: Java
+- slug: analysis
+  name: Analysis
