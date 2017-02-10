@@ -71,13 +71,13 @@ The original machine had a base-plate of **~~prefabulated~~** aluminite...
 
 ...in such a way that the two main **~~spurving~~** bearings...
 
-1. **~~spurving~~**: The only word this could come from is "spurve", a nickname for the bird "sparrow". 
+1. **~~spurving~~**: The only word this could come from is "spurve", a nickname for the bird "sparrow".
 2. bearing: A bearing is a structure that can support weight
 
 ...were in a direct line with the *pentametric fan*.
 
-1. *pentametric*: Pentametric is a word... relating to a line of verse consisting of five metrical fee, used only in poetry.
-2. *pentametric fan*: Perhaps the fan has good rhythm?
+1. *pentametric*: Pentametric is a word... relating to a line of verse consisting of five metrical feet, used only in poetry.
+2. *pentametric fan*: Perhaps the fan has a good, poetic rhythm?
 
 The latter consisted simply of six **~~hydrocoptic~~** ~~marzlevanes~~...
 
