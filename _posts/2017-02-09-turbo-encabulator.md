@@ -99,12 +99,13 @@ The main *winding* was of the *normal* *~~lotus-o-delta~~* type...
 
 1. *winding*: Hold up. Where did this winding come from? What are we winding?
 2.  *normal* *~~lotus-o-delta~~*: There's nothing normal about the non-existent lotus-o-delta type of winding.
-3. ~~panendermic~~: Pan is a prefix meaning everything, and endermic means acting through direct skin contact. Doesn't really fit together.
+
 
 ...placed in ~~panendermic~~ ~~semi-boloid~~ slots in the stator...
 
-1. ~~semi-boloid~~: Yup, you guessed it: boloid isn't a word.
-2. stator: The stator is the stationary portion of an electric generator or motor, which actually kinda maybe works in this context?
+1. ~~panendermic~~: Pan is a prefix meaning everything, and endermic means acting through direct skin contact. Doesn't really fit together.
+2. ~~semi-boloid~~: Yup, you guessed it: boloid isn't a word.
+3. stator: The stator is the stationary portion of an electric generator or motor, which actually kinda maybe works in this context?
 
 ...every seventh conductor being connected by a *nonreversible tremie pipe*...
 
@@ -133,9 +134,9 @@ Undoubtedly, the turbo-~~encabulator~~ has now reached a very high level of tech
 
 It has been successfully used for operating ~~nofertrunnions~~.
 
- In addition, whenever a ~barescent~ *skor motion* is required...
+ In addition, whenever a ~~barescent~~ *skor motion* is required...
 
-1. ~barescent~: -escent is a suffix that forms adjectives denoting a developing state or action, such as "fluorescent" which means: having or showing fluorescence. bar- as a prefix, is Aramaic for son, or pure. So maybe having or showing purity?
+1. ~~barescent~~: -escent is a suffix that forms adjectives denoting a developing state or action, such as "fluorescent" which means: having or showing fluorescence. bar- as a prefix, is Aramaic for son, or pure. So maybe having or showing purity?
 2.  *skor motion*: I doubt the original publisher was aware of this meaning, but skor can mean shoe.
 
 ...it may be employed in conjunction with a *deep drawn reciprocating dingle arm*...
