@@ -100,7 +100,7 @@ As you can see, in every ply the player tries maximizing their own gains and min
 You can build a pretty reasonable AI using this pure minimax algorithm, though there are still many improvements that can be made, that I'll perhaps cover in a [future post][minimax improvements post]. Try playing my own [Gomoku AI]!
 
 
-[last post]:{{site.baseurl}}/artificial%20intelligence/2015/12/10/tic-tac-toe-ai-with-depth-first-search.html "tic tac toe AI with depth-first search"
+[last post]:{{site.baseurl}}/artificial-intelligence/2015/12/10/tic-tac-toe-ai-with-depth-first-search/ "tic tac toe AI with depth-first search"
 [dfs wiki]:https://en.wikipedia.org/wiki/Depth-first_search "depth-first search wikipedia"
 [branching factor]:https://en.wikipedia.org/wiki/Branching_factor "branching factor wikipedia"
 [minimax]:https://en.wikipedia.org/wiki/Minimax "minimax wikipedia"
@@ -115,4 +115,4 @@ You can build a pretty reasonable AI using this pure minimax algorithm, though t
 [ply]:https://en.wikipedia.org/wiki/Ply_(game_theory) "ply wikipedia"
 [alpha-beta pruning]:https://en.wikipedia.org/wiki/Alpha–beta_pruning "alpha-beta pruning"
 [Gomoku AI]:https://www.theofekfoundation.org/games/OnlineGo/ "gomoku AI"
-[minimax improvements post]:{{site.baseurl}}/artificial%20intelligence/2015/12/18/minimax-improvements.html
+[minimax improvements post]:{{site.baseurl}}/artificial-intelligence/2015/12/18/minimax-improvements/

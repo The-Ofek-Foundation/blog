@@ -55,7 +55,7 @@ If you have conducted all the above steps that apply for your game, you have jus
 
 Leave feedback and/or improvements please!
 
-[last post]:{{site.baseurl}}/artificial%20intelligence/2015/12/11/minimax-for-gomoku-connect-five.html "minimax for gomoku"
+[last post]:{{site.baseurl}}/artificial-intelligence/2015/12/11/minimax-for-gomoku-connect-five/ "minimax for gomoku"
 [minimax wiki]:https://en.wikipedia.org/wiki/Minimax "minimax wikipedia"
 [gomoku wiki]:https://en.wikipedia.org/wiki/Gomoku "gomoku wikipedia"
 [zero-sum game wiki]:https://en.wikipedia.org/wiki/Zero-sum_game "zero-sum games wikipedia"
