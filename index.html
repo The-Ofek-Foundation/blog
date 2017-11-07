@@ -27,7 +27,7 @@ comments: true
 
 	{% for tag in site.categories %}
 		{% assign words = tag[0] | split: '-' %}
-		<h2 class="title-case" id="{% for word in words %}{{ word | capitalize }} {% endfor %}">{% for word in words %}{{ word | capitalize }} {% endfor %}</h2>
+		<h2 class="title-case" id="{{ tag[0] }}">{% for word in words %}{{ word | capitalize }} {% endfor %}</h2>
 		{% assign words = nil %}
 		<ul class="post-list">
 			{% assign pages_list = tag[1] %}
