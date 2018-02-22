@@ -31,9 +31,9 @@ First of all, let's equip ourselves with some tools that we can use to tackle th
 The second problem is very simple to answer. Note that there is a caveat that I will get back to later, but for now just go along with it. Anyways, it is simple to map the 6 unique squares within a distance of 2 from the destination to a number of knight moves.
 
 * (0, 0) -> 0 moves (already at the destination)
-* (0, 1) -> 3 moves
-* (1, 1) -> 2 moves (unless destination is a corner square, in which case it's 4 moves)
-* (0, 2) -> 2 moves
+* (1, 0) -> 3 moves
+* (1, 1) -> 2 moves (or 4 moves if in corner)
+* (2, 0) -> 2 moves
 * (2, 1) -> 1 move
 * (2, 2) -> 4 moves
 
@@ -70,7 +70,61 @@ The second symmetry can be exploited by treating the dx the same as dy. For conv
 {% gist 4cd3f8548b94145832c7703cc2a2605b %}
 
 
-The final piece of the puzzle is realizing that in any possible position, the move that moves the knight closer to this square is the move where it jumps two spaces towards its greater displacement, and one space towards the smaller displacement. This means that if its displacement
+The final piece of the puzzle is realizing that in any possible position, the move that moves the knight closer to this square is the move where it jumps two spaces towards its greater displacement, and one space towards the smaller displacement. This means that if its displacement in x is greater than its displacement in y, it should make a larger jump in the x direction. Since we're defining dx to be >= dy, then it can always make jumps in the dx direction, as long as we maintain that dx >= dy (by continually swapping).
+
+This trivializes the solution to this:
+
+{% gist c2cfd5c1f92f0d32bf697cbeaf955385 %}
+
+Note how in every case the knight makes a legal move, either (dx - 2, dy - 1) or (dx - 2, dy + 1), where both are moving 2 units in one direction, and 1 unit in the other.
+
+Now, we just need to implement the 6 initial positions that we solved before, and we're done... right?
+
+Well... not exactly.
+
+Look at the below two diagrams in order to understand the possible error:
+
+![1 0 error]
+![1 0 good]
+
+In the left diagram, the knight moves into the distance 2 square, and then uses the optimal solution for that point, resulting in 4 moves. However, as shown in the right diagram, if the knight had decided to enter the distance 2 square from another location, it would be able to reach the destination in just 2 moves. This also holds true for one of the other possible moves, shown below:
+
+![2 2 bad]
+![2 2 good]
+
+
+![2 2 good2]
+![2 2 good3]
+
+
+The top left diagram shows one possible situation where the (2, 2) move could be entered into, describing a path with 5 moves. However, similar to the last example, the top right diagram shows an optimal solution that avoids the (2, 2) point, taking 3 moves instead. This situation is a bit trickier, however, since there are two other unique situations that could lead to the (2, 2) point. However, as shown in the bottom two diagrams, the optimal moves for these two situations also conveniently take 3 moves.
+
+What this means, in essence, is that any more that would lead into the (1, 0) or the (2, 2) squares from the outside could have picked a better path that would save it 2 moves in total. Therefore, unless the knight initially started in the (2, 2) or (1, 0) squares, if it landed in any of those two squares, you should *remove 2 moves from your count*.
+
+With this in mind, let's update our table:
+
+* (0, 0) -> 0 moves (already at the destination)
+* (1, 0) -> 3 moves, **or only 1 move if not the first move**
+* (1, 1) -> 2 moves (or 4 moves if in corner)
+* (2, 0) -> 2 moves
+* (2, 1) -> 1 move
+* (2, 2) -> 4 moves, **or only 2 moves if not the first move**
+
+While we're at it, the whole (1, 1) corner conundrum can also be avoided if it isn't the first move, see the below diagram:
+
+![1 1 bad]
+![1 1 good]
+
+As you can see, the first diagram heads into the (1, 1) square even though the destination is a corner, and it takes 5 moves. However, as you see from the right diagram, the knight could've picked another path that takes only 3 moves. Since this also saves 2 moves, the only situation where the (1, 1) spot effectively takes 4 moves instead of two is if the knight starts there in its first move. Therefore, the (1, 1) slot in the table can be amended as follows:
+
+* (1, 1) -> 2 moves (or 4 moves if in corner **and first move**)
+
+This allows us to finally write a complete function that determines how many moves to add from the distance 2 square:
+
+{% gist 15cbc2973bdadac8733a0b85b01a9ed4 %}
+
+Note that the above function doesn't handle the (1, 1) first move problem&mdash; since this function only takes dx and dy, it doesn't know the initial locations. Therefore, this problem must be addressed elsewhere.
+
 
 [radius 2 knight moves]:{{site.baseurl}}/assets/images/radius2knightmoves.gif "radius 2 knight moves"
 
@@ -84,4 +138,19 @@ The final piece of the puzzle is realizing that in any possible position, the mo
 
 [rot sim 2]:{{site.baseurl}}/assets/images/rotsim2.gif "knight rotational symmetry example"
 
+[1 0 error]:{{site.baseurl}}/assets/images/10error.gif "suboptimal knight path"
+
+[1 0 good]:{{site.baseurl}}/assets/images/10good.gif "optimal knight path"
+
+
+[2 2 bad]:{{site.baseurl}}/assets/images/22bad.gif "suboptimal knight path"
+
+[2 2 good]:{{site.baseurl}}/assets/images/22good.gif "optimal knight path"
+
+[2 2 good2]:{{site.baseurl}}/assets/images/22good2.gif "optimal knight path 2"
+[2 2 good3]:{{site.baseurl}}/assets/images/22good3.gif "optimal knight path 3"
+
+[1 1 bad]:{{site.baseurl}}/assets/images/11bad.gif "suboptimal knight path"
+
+[1 1 good]:{{site.baseurl}}/assets/images/11good.gif "optimal knight path"
 
