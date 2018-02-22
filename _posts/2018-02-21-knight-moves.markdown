@@ -130,6 +130,12 @@ If you understand all of the above, we're now ready to solve the whole problem:
 
 {% gist ecc62ab019cfc7dc37d855a83fcd5c8b %}
 
+Feel free to copy the above code into a text editor and test it out for yourselves!
+
+
+Coming Soon: ``O(log(n))`` iterative solution, and ``O(1)`` solution explanation.
+
+
 
 [radius 2 knight moves]:{{site.baseurl}}/assets/images/radius2knightmoves.gif "radius 2 knight moves"
 
