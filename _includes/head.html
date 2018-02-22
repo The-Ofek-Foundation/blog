@@ -19,6 +19,18 @@
 		{% include we-blog.js %}
 	</script>
 	{% if page.custom-style %}
-	<link rel="{{page.custom-style-rel}}" href="{{page.custom-style-src}}"></link>
+		{% if page.custom-style-src %}
+			{% if page.custom-style-rel %}
+				<link rel="{{page.custom-style-rel}}" href="{{page.custom-style-src}}"></link>
+			{% else %}
+				<link rel="stylesheet" href="{{page.custom-style-src}}"></link>
+			{% endif %}
+		{% else %}
+			{% if page.custom-style-rel %}
+				<link rel="{{page.custom-style-rel}}" href="{{site.baseurl}}/assets/{{page.title}}.css"></link>
+			{% else %}
+				<link rel="stylesheet" href="{{site.baseurl}}/assets/{{page.title}}.css"></link>
+			{% endif %}
+		{% endif %}
 	{% endif %}
 </head>
