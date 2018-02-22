@@ -29,9 +29,9 @@ function mapSquare(dx_real, dy_real) {
 	let dx = Math.max(dx_real, dy_real) - 3;
 	let dy = Math.min(dx_real, dy_real);
 	let diag = dx + dy;
-	let val = diag / 2 | 0 + 1;
-	let diag_val = val - (dy + (diag + 1) % 2) / 2 | 0;
-	let mv = Math.max(1, (diag + 1)) / 3 | 0;
+	let val = parseInt(diag / 2) + 1;
+	let diag_val = val - parseInt((dy + (diag + 1) % 2) / 2);
+	let mv = Math.max(1, parseInt((diag + 1) / 3));
 	return Math.max(diag_val, mv);
 }
 
@@ -39,10 +39,10 @@ function mapFinal(dx_real, dy_real) {
 	let dx = Math.max(dx_real, dy_real) - 3;
 	let dy = Math.min(dx_real, dy_real);
 
-	let patternCeil = dx / 2 | 0 + 4 - dx % 2;
+	let patternCeil = parseInt(dx / 2) + 4 - dx % 2;
 
 	if (dy <= patternCeil)
-		return ((dx + 1) / 2 | 0 + dy + 1) % 2 + 1;
+		return (parseInt((dx + 1) / 2) + dy + 1) % 2 + 1;
 
 	if ((dy - patternCeil) % 3 === 2)
 		return 1;

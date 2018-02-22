@@ -126,6 +126,11 @@ This allows us to finally write a complete function that determines how many mov
 Note that the above function doesn't handle the (1, 1) first move problem&mdash; since this function only takes dx and dy, it doesn't know the initial locations. Therefore, this problem must be addressed elsewhere.
 
 
+If you understand all of the above, we're now ready to solve the whole problem:
+
+{% gist ecc62ab019cfc7dc37d855a83fcd5c8b %}
+
+
 [radius 2 knight moves]:{{site.baseurl}}/assets/images/radius2knightmoves.gif "radius 2 knight moves"
 
 [knight move special case]:{{site.baseurl}}/assets/images/knightmoveexception.gif "knight move special case"
