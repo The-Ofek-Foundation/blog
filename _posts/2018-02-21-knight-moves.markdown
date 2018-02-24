@@ -5,9 +5,10 @@ subcategory: programming-challenges
 layout: post
 custom-style: true
 custom-script: true
+mathjax: true
 ---
 
-I recently came across a simple coding problem: What's the fewest number of moves it would take to move a chess knight from any single point on an n-dimensional board to any other point. The original problem asked to find a recursive solution, but that would take an unreasonable amount of time for large boards. In this blog post I'll walk you through solutions for the problem starting with ``O(n)`` complexity, but quickly progressing to ``O(log(n))`` and even **``O(1)``** complexities.
+I recently came across a simple coding problem: What's the fewest number of moves it would take to move a chess knight from any single point on an n-dimensional board to any other point. The original problem asked to find a recursive solution, but that would take an unreasonable amount of time for large boards. In this blog post I'll walk you through two solutions for the problem, an ``O(n)`` complexity iterative solution, and then an **``O(1)``** mathematic solution.
 
 ## Working **O(1)** Demo
 
@@ -132,9 +133,87 @@ If you understand all of the above, we're now ready to solve the whole problem:
 
 Feel free to copy the above code into a text editor and test it out for yourselves!
 
+## Creating an **O(1)** Mathematical Solution
 
-Coming Soon: ``O(log(n))`` iterative solution, and ``O(1)`` solution explanation.
+This solution uses the same line of approach as the last one, except that it overrides iteration by using some relatively simple mathematics. Note that the second phase (finding out how many moves it takes from the 5x5 square to the destination) is implemented in the same way.
 
+First, let's represent the knights moves with variables to be used in mathematics.
+
+* **dx**: The greater displacement component between start & end points
+* **dy**: The lesser displacement component
+* **nx**: The number of knight moves primarily in the ``dx`` direction (moving 2 units towards ``dx`` and 1 unit toward ``dy``, like a knight)
+* **ny**: The number of knight moves in the ``dy`` direction
+
+Here is my proposal for solving the problem:
+
+1. Calculate the minimum ``ny`` necessary
+2. Use that ``ny`` to find the minimum ``nx`` necessary
+3. Use the ``nx`` and ``ny`` values to find the position the knight will be after moving
+4. Use the previous solutions' algorithm to figure out how many moves to add to the end
+
+To do this, we need to set up a series of inequalities. In the x direction, we know that after moving ``nx`` moves in the x direction and ``ny`` moves in the y (and x) direction, the ``dx`` will be between 0 and 2. Since we know that it's not possible to jump directly into the 0 point (0, 0), then we can exclude 0, so $$0 \lt dx_f \le 2$$.
+
+Putting this in equation form, you get:
+
+$$dx_f = dx - 2nx - ny\\0 \lt dx - 2nx - ny \le 2$$
+
+In the y direction, however, it doesn't necessarily need to move at all&mdash; think (100, 0). Its ``nx`` will be large (49, to be exact), but its $$dy_f$$ won't be -49. Since we don't know its lower bound, the equation form looks like this:
+
+
+$$ dy_f \ge dy - 2ny - nx\\dy - 2ny - nx \le 2$$
+
+Now, looking at our outline, we need to solve for the minimum possible ``ny``.
+
+$$
+\begin{align*}
+	0 \lt dx - 2nx - ny &\le 2\\\\
+	dy - 2ny - nx &\le 2 && \text{Let's solve for nx}\\
+	dy - 2ny - 2 &\le nx && \text{subtract 2 and add nx}\\\\
+	0 &\lt dx - 2 \times (dy - 2ny - 2) - ny && \text{substitute into 1st equation}\\
+	dx - 2dy + 4ny + 4 -ny &\gt 0 && \text{expand parentheses}\\
+	dx - 2dy + 3ny &\gt -4 && \text{combine like terms}\\
+	3ny &\gt 2dy - dx - 4 && \text{isolate ny}\\
+	ny &\gt \frac{2dy - dx - 4}{3}\\
+	ny &\gt \left\lfloor\frac{2dy - dx - 4}{3}\right\rfloor && \text{take floor to make into an integer}\\
+	ny &\ge \left\lfloor\frac{2dy - dx - 4}{3}\right\rfloor + 1 && \text{add 1 and change inequality}\\
+	ny &\ge \left\lfloor\frac{2dy - 2d - 1}{3}\right\rfloor && \text{algebraic fiddling}
+\end{align*}
+$$
+
+Using a little bit of algebra, we managed to deduce that $$ny \ge \left\lfloor\frac{2dy - 2d - 1}{3}\right\rfloor$$. This solves step 1, since the minimum ``ny`` necessary is $$\left\lfloor\frac{2dy - 2d - 1}{3}\right\rfloor$$. Note that if the above value is negative, then $$ny = 0$$.
+
+Now we want to use that value of ``ny`` to find ``nx`` in a similar algebraic fashion.
+
+$$
+\begin{align*}
+	0 \lt dx - 2nx - ny &\le 2 && \text{same equation as last time}\\
+	-2 \le -dx + 2nx + ny &\lt 0 && \text{multiply by -1}\\
+	dx - ny - 2 \le 2nx &\lt dx - ny && \text{isolate nx}\\
+	\frac{dx - ny - 2}{2} \le nx &\lt \frac{dx - ny}{2}\\
+	\frac{dx - ny - 2}{2} \le \frac{dx - ny - 1}{2} &\lt \frac{dx - ny}{2} && \text{insert expression that fits}\\
+	nx &= \left\lfloor\frac{dx - ny - 1}{2}\right\rfloor && \text{use floor because ≤ on left side}\\
+\end{align*}
+$$
+
+That wasn't too bad! Now that we have both ``nx`` and ``ny``, the next step is to find the final position the knight will be in. That's super simple!
+
+$$
+\begin{align*}
+	dx_f &= dx - 2nx - ny\\
+	dy_f &= (dy - 2ny - nx)\mod(2) && \text{the mathematical mod handles negative y values}\\
+\end{align*}
+$$
+
+The last phase is already done for us from the iterative solution, so we can just combine them all together as so:
+
+{% gist 126c2c28dc011b124a97541b30550c84 %}
+
+And that's it! A relatively simple, mathematical solution for this problem! Feel free to test it out to your heart's desire and let me know if you have any questions!
+
+***But wait... there's more...?***
+If any of you decided to look at the source code for the ``O(1)`` demo above, you would notice that the algorithm over there looks a bit weird (and in javascript). Keep tuned for the next post, but as a teaser I'll leave you with this different, fully working, ``O(1)`` solution for the problem in python. See if you understand how it works!
+
+{% gist e2e19254a7398ba1731b654f6d629786 %}
 
 
 [radius 2 knight moves]:{{site.baseurl}}/assets/images/radius2knightmoves.gif "radius 2 knight moves"
