@@ -137,7 +137,7 @@ Feel free to copy the above code into a text editor and test it out for yourselv
 
 This solution uses the same line of approach as the last one, except that it overrides iteration by using some relatively simple mathematics. Note that the second phase (finding out how many moves it takes from the 5x5 square to the destination) is implemented in the same way.
 
-First, let's represent the knights moves with variables to be used in mathematics.
+First, let's represent the knight moves with variables to be used in mathematics.
 
 * **dx**: The greater displacement component between start & end points
 * **dy**: The lesser displacement component
