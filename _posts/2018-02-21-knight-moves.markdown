@@ -148,7 +148,7 @@ Here is my proposal for solving the problem:
 
 1. Calculate the minimum ``ny`` necessary
 2. Use that ``ny`` to find the minimum ``nx`` necessary
-3. Use the ``nx`` and ``ny`` values to find the position the knight will be after moving
+3. Use the ``nx`` and ``ny`` values to find the position the knight will be at after moving
 4. Use the previous solutions' algorithm to figure out how many moves to add to the end
 
 To do this, we need to set up a series of inequalities. In the x direction, we know that after moving ``nx`` moves in the x direction and ``ny`` moves in the y (and x) direction, the ``dx`` will be between 0 and 2. Since we know that it's not possible to jump directly into the 0 point (0, 0), then we can exclude 0, so $$0 \lt dx_f \le 2$$.
@@ -157,7 +157,7 @@ Putting this in equation form, you get:
 
 $$dx_f = dx - 2nx - ny\\0 \lt dx - 2nx - ny \le 2$$
 
-In the y direction, however, it doesn't necessarily need to move at all&mdash; think (100, 0). Its ``nx`` will be large (49, to be exact), but its $$dy_f$$ won't be -49. Since we don't know its lower bound, the equation form looks like this:
+In the y direction, however, it doesn't necessarily need to move at all&mdash;think (100, 0). Its ``nx`` will be large (49, to be exact), but its $$dy_f$$ won't be -49. Since we don't know its lower bound, the equation form looks like this:
 
 
 $$ dy_f \ge dy - 2ny - nx\\dy - 2ny - nx \le 2$$
