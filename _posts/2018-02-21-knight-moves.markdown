@@ -8,7 +8,7 @@ custom-script: true
 mathjax: true
 ---
 
-I recently came across a simple coding problem: What's the fewest number of moves it would take to move a chess knight from any single point on an n-dimensional board to any other point. The original problem asked to find a recursive solution, but that would take an unreasonable amount of time for large boards. In this blog post I'll walk you through two solutions for the problem, an ``O(n)`` complexity iterative solution, and then an **``O(1)``** mathematic solution.
+I recently came across a simple coding problem: What's the fewest number of moves it would take to move a chess knight from any single point on an n by n board to any other point. The original problem asked to find a recursive solution, but that would take an unreasonable amount of time for large boards, and I was also in the unbounded board case. In this blog post I'll walk you through two solutions for the problem, an ``O(n)`` complexity iterative solution, and then an **``O(1)``** mathematic solution.
 
 ## Working **O(1)** Demo
 
