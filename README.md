@@ -18,7 +18,7 @@
 1. Clone the repository from [here][repo url], e.g.:
 
 	```bash
-	https://github.com/The-Ofek-Foundation/blog.git
+	git clone https://github.com/The-Ofek-Foundation/blog.git
 	```
 
 #### Step 3: Install ruby dependencies from Gemfile
