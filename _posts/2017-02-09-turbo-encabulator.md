@@ -10,10 +10,10 @@ custom-style-src: /css/turbo-encabulator.css
 ## The Turbo-Encabulator
 If you do not already know what the turbo-encabulator is, please see the following [two-minute-long video][turbo-encabulator video].
 
-The turbo-encabulator is hilarious, and as a somewhat tech-savvy person myself, some of the words used just confuse me and pass over my head. It seems to be a mix of real words, fake words, and words used way out of context. I decided to look up every single word I didn't know, and I have to admit, the turbo-encabulator is significantly funnier than I had previously understood before.
+The turbo-encabulator is hilarious, and as a somewhat tech-savvy person myself, some of the words used just confuse me and pass over my head. It seems to be a mix of real words, fake words, and words used way out of context. I decided to look up every single word I didn't know, and I have to admit, the turbo-encabulator is significantly funnier than I had previously understood.
 
 ### Line-by-Line deconstruction
-~~italicized~~ words are made up  
+~~strike-through~~ words are made up  
 *italicized* words exist, but are used way out of context  
 **bolded** words are very funny
 
