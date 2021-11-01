@@ -16,7 +16,7 @@ In this blog, I'll work you through my brief history with this game, my computer
 
 ## My History with Boggle
 
-In early 2018, I played Boggle with my friend online on [this website]. My friend handily beat me every time. Perhaps it is more accurate to say *crushed* me. Needless to say the outcome was unacceptable. So I made them a bet that within the span of one day I would be able to consistently beat them. They naively took the bet. My father taught me that there are exactly two people in every bet—the cheater and the idiot. If you're not the cheater, then you're the idiot.
+In early 2018, I played Boggle with my friend online on [this website]. My friend handily beat me every time. Perhaps it is more accurate to say *crushed* me. Needless to say the outcome was unacceptable. So I made them a bet that within the span of one day I would be able to consistently beat them. They naively took the bet. My grandfather taught me that there are exactly two people in every bet—the cheater and the idiot. If you're not the cheater, then you're the idiot.
 
 So I practiced my C++ coding (the language I had just started learning at the time) to solve the game of Boggle, and use it to win every game. All I had to do was tell it what letters were showing on the board, and the program handle the rest, typing in all the words for me at a far faster rate than I could ever emulate.
 
