@@ -32,8 +32,10 @@ I am now 23, twice the age I was when I constructed this philosophy, and **it st
 
 I should mention that a key source of inspiration for some of the more important aspects of my philosophy was older people, not just adults but people the ages of 70+. These people had hindsight, and I spoke with many such people at length about these topics, _allowing some of this hindsight to shape my foresight_, giving me perspective that may be uncommon for others in middle school.
 
-During the last few months at my aforementioned high school Jewish youth club (the youth club had ~80 members, changing annually), I decided to give short, ~10 minute talks at business meetings, once every two weeks, passing along some insights to them. I called this biweekly speech, **Ofek's Life Section**. I'll include each of these topics, both unedited and an expanded upon version on this blog.
+During the last few months at my aforementioned high school Jewish youth club (the youth club had ~80 members, changing annually), I decided to give short, ~10 minute talks at business meetings, once every two weeks, passing along some insights to them. I called this biweekly speech, **Ofek's Life Section**. I'll include each of these topics, both unedited and an expanded upon version on this blog. The [first post] is how we are all egoists :P
 
 ---
 
 Note: The name **Ofek's Life Section** is a reference to **Ofek's _Music_ Section**, a section I wrote for their newspaper, where I analyzed and translated if needed various songs that were either very deep or very poetic. I have yet to publish these analyses publicly, but you can find similar analyses at on my other website, <https://songs.theofekfoundation.org>.
+
+[first post]:{{site.baseurl}}/philosophy/2017/01/30/you-are-an-egoist-too/ "You are an Egoist too"
