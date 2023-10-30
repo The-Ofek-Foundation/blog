@@ -162,6 +162,8 @@ All joking aside, we all know people who talk confidently about things that they
 
 ### Chapter Four: The Teleological Approach to God's Existence
 
+In progress.
+
 [^1]: _Permission to Believe_ page 11
 [^2]: _Permission to Believe_ page 12
 [^3]: _Permission to Believe_ page 16
