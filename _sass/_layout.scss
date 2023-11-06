@@ -59,7 +59,7 @@
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
-        right: calc($spacing-unit / 2);
+        right: calc(#{$spacing-unit} / 2);
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
@@ -118,7 +118,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: calc($spacing-unit / 2);
+    margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
 .contact-list,
@@ -130,14 +130,14 @@
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: calc($spacing-unit / -2);
+    margin-left: calc(#{$spacing-unit} / -2);
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: calc($spacing-unit / 2);
-    padding-left: calc($spacing-unit / 2);
+    margin-bottom: calc(#{$spacing-unit} / 2);
+    padding-left: calc(#{$spacing-unit} / 2);
 }
 
 .footer-col-1 {
@@ -256,7 +256,7 @@
 }
 
 $toc-container-top: $header-total-height + $spacing-unit;
-$toc-content-height: calc(100vh - 3 * $header-total-height);
+$toc-content-height: calc(100vh - 3 * #{$header-total-height});
 
 $toc-transition-duration: 0.3s;
 
@@ -305,10 +305,10 @@ $toc-transition-duration: 0.3s;
                     transform $toc-transition-duration ease;
         position: absolute;
 
-        left: calc(100% + $spacing-unit);
+        left: calc(100% + #{$spacing-unit});
         top: -$spacing-unit;
         min-width: 150px;
-        max-width: calc(80vw - 100% - 2 * $spacing-unit);
+        max-width: calc(80vw - 100% - 2 * #{$spacing-unit});
         max-height: $toc-content-height;
         white-space: nowrap;
         padding: $spacing-unit;
