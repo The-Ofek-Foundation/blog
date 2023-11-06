@@ -8,7 +8,7 @@ layout: default
 		<img src="{{site.baseurl}}/assets/icons/toc.svg" alt="TOC Icon" />
 	</div>
 	<div class="toc-content">
-		{% toc %}
+		{% include toc.html html=content %}
 	</div>
 </div>
 {% endif %}
@@ -24,7 +24,7 @@ layout: default
 	{% if page.toc %}
 	<!-- IF ON PALM, SHOW THIS -->
 	<div class="palm-toc">
-		{% toc %}
+		{% include toc.html html=content %}
 	</div>
 	{% endif %}
 

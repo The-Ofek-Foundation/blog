@@ -36,7 +36,7 @@
 Start running with:
 
 ```bash
-jekyll serve
+bundle exec jekyll serve
 ```
 
 

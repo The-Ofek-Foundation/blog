@@ -33,6 +33,3 @@ defaults:
       new-tab-redirect: true
       comments: true
       toc: true
-
-plugins:
-  - jekyll-toc
