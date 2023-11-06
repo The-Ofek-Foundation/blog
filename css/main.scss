@@ -16,16 +16,25 @@ $heading-font-weight: 300;
 $small-font-size:  $base-font-size * 0.5;
 $base-line-height: 1.5;
 
+$header-height: 56px;
+$header-border-top-size: 5px;
+$header-border-bottom-size: 1px;
+$header-total-height: $header-height + $header-border-top-size + $header-border-bottom-size;
+
 $spacing-unit:     30px;
 $code-tab-size:    4;
 
 $text-color:       #3f3f3f;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
+$brand-background-color: lighten($brand-color, 30%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$icon-hover-scale: 1.05; // Slight increase in size to indicate hover
+$icon-transition-duration: 0.3s;
 
 // Width of the content area
 $content-width:    800px;
@@ -48,11 +57,34 @@ $on-laptop:        800px;
 	}
 }
 
+// Table styles
+$alternate-row-color: $grey-color-light;
+$border-color: $grey-color-dark;
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid $border-color;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: $brand-background-color;
+}
+
+tr:nth-child(even) {
+    background-color: $alternate-row-color;
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		"base",
-		"layout",
-		"syntax-highlighting"
+	"base",
+	"layout",
+	"syntax-highlighting"
 ;

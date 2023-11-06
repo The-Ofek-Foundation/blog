@@ -5,19 +5,19 @@ subcategory: analysis
 custom-style: true
 custom-style-rel: stylesheet
 custom-style-src: /css/turbo-encabulator.css
+layout: post
 ---
 
-## The Turbo-Encabulator
 If you do not already know what the turbo-encabulator is, please see the following [two-minute-long video][turbo-encabulator video].
 
 The turbo-encabulator is hilarious, and as a somewhat tech-savvy person myself, some of the words used just confuse me and pass over my head. It seems to be a mix of real words, fake words, and words used way out of context. I decided to look up every single word I didn't know, and I have to admit, the turbo-encabulator is significantly funnier than I had previously understood.
 
-### Line-by-Line deconstruction
+## Line-by-Line deconstruction
 ~~strike-through~~ words are made up  
 *italicized* words exist, but are used way out of context  
 **bolded** words are very funny
 
-#### The Turbo-~~Encabulator~~
+### The Turbo-~~Encabulator~~
 
 > For a number of years now, work has been proceeding in order to bring to perfection the crudely conceived idea of a machine that would not only supply inverse reactive current for use in unilateral phase detractors, but would also be capable of automatically synchronizing cardinal grammeters.
 
@@ -51,7 +51,7 @@ Basically, the only new principle involved is that instead of power being genera
 3. ~~capacitive~~: This word, funnily enough, exists today, but didn't exist in the 1940s when this was written. Today it refers to technology that uses a medium's capacitance as an input, but back then, nope.
 4. ~~directance~~: This simply isn't a word.
 
-### And now it gets good...
+## And now it gets good...
 > The original machine had a base-plate of prefabulated aluminite, surmounted by a malleable logarithmic casing in such a way that the two main spurving bearings were in a direct line with the pentametric fan. The latter consisted simply of six hydrocoptic marzlevanes, so fitted to the ambifacient lunar waneshaft that side fumbling was effectively prevented.
 
 The original machine had a base-plate of **~~prefabulated~~** aluminite...
@@ -126,7 +126,7 @@ The main *winding* was of the *normal* *~~lotus-o-delta~~* type...
 
 1. ***the "up" end of the grammeters***: Remember that a grammeter is a unit of measurement—grams per meter—meaning that it cannot have an "up" end...
 
-### The grand finale...
+## The grand finale...
 
 > Undoubtedly, the turbo-encabulator has now reached a very high level of technical development. It has been successfully used for operating nofertrunnions. In addition, whenever a barescent skor motion is required, it may be employed in conjunction with a deep drawn reciprocating dingle arm to reduce sinusoidal depleneration. 
 
@@ -151,7 +151,7 @@ It has been successfully used for operating ~~nofertrunnions~~.
 1. sinusoidal: A mathematics curve showing smooth oscillations—basically a curve that endlessly goes up and down.
 2. ~~depleneration~~: The only possible meaning depleneration can have is as a mix of "deplete(d/ing)" and "regeneration", which would mean a regeneration that decreases over time or something o_O How that can be sinusoidal is again, beyond me.
 
-### That's the show folks!
+## That's the show folks!
 
 I got the above text from the [original source][original text], an article published in 1944 in a British journal. If you have any questions or corrections, please leave a comment down below, although I am doubtful as to how much help I can provide :P
 

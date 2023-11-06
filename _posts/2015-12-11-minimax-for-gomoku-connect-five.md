@@ -2,11 +2,10 @@
 title: Minimax for Gomoku (Connect Five)
 category: artificial-intelligence
 subcategory: minimax
+layout: post
 ---
 
-## Minimax for Gomoku (Connect Five)
-
-### Refresher
+## Refresher
 
 If you all remember from the [last post], we used [depth-first search][dfs wiki] to solve the game of Tic Tac Toe, recursively traversing all the possible branches and finding the outcome given optimal play. Since we began from the bottom, we were able to  tell if a move was winning, losing, or tying and then work our way up, playing optimal moves for each player. This made the solution *very simple* for the following reasons:
 
@@ -15,7 +14,7 @@ If you all remember from the [last post], we used [depth-first search][dfs wiki]
 
 However, it's major flaw made it impractical for even slightly more complex games—It's complexity increases **exponentially** with both the [branching factor] and the depth, making it take literally *years* to run for Connect Four on a normal computer.
 
-### Minimax
+## Minimax
 
 The most basic solution to this problem is actually another for of depth-first search, except this time, instead of searching to the end of the game, you only search to a certain depth. This brings up the additional complexity in [minimax], as **an [evaluation function] is required** to assess how good each position is. Instead of returning a 1, -1, or 0 depending on if the game is a win, loss, or tie, you might return a 0.8, -0.25, or a 0.001 based off of the output of your heuristic evaluation function.
 

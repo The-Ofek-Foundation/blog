@@ -1,6 +1,18 @@
 ---
 layout: default
 ---
+{% if page.toc %} 
+<!-- IF ON LAPTOP SHOW THIS -->
+<div class="toc-container">
+	<div class="toc-icon" onclick="toggleTOC()">
+		<img src="{{site.baseurl}}/assets/icons/toc.svg" alt="TOC Icon" />
+	</div>
+	<div class="toc-content">
+		{% toc %}
+	</div>
+</div>
+{% endif %}
+
 <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
 	<header class="post-header">
@@ -9,8 +21,30 @@ layout: default
 		{% if page.lastmodified %}<p class="post-meta">Last modified: <time datetime="{{ page.lastmodified | date_to_xmlschema }}" itemprop="dateLastModified">{{ page.lastmodified | date: "%b %-d, %Y" }}</time></p>{% endif %}
 	</header>
 
+	{% if page.toc %}
+	<!-- IF ON PALM, SHOW THIS -->
+	<div class="palm-toc">
+		{% toc %}
+	</div>
+	{% endif %}
+
 	<div class="post-content" itemprop="articleBody">
 		{% include anchor_headings.html html=content anchorBody="#" %}
 	</div>
-
 </article>
+
+<script>
+	function toggleTOC() {
+		let tocContent = document.querySelector('.toc-content');
+		tocContent.classList.toggle('stay-open');
+	}
+
+	document.addEventListener('click', function(event) {
+		let isClickInside = document.querySelector('.toc-container').contains(event.target);
+		let tocContent = document.querySelector('.toc-content');
+		
+		if (!isClickInside && tocContent.classList.contains('stay-open')) {
+			tocContent.classList.remove('stay-open');
+		}
+	});
+</script>

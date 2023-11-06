@@ -2,22 +2,22 @@
 title: Java Style Guide
 category: general-computer-programming
 subcategory: java
+layout: post
 ---
 
 
-# Java Style Guide
 A majority of these styles are based off [Google's Java Style Guide][google java style guide], although many preferences are different. This style guide also largely agrees with [Mr. Greenstein's style guide][greenstein style guide], with a notable exception of indentation convention (use tabs, not spaces). This style guide also includes much more detail.
 
-### Source File
+## Source File
 **No wildcard imports**. Other than that, order the statements however you think makes the most sense. Empty lines between imports to separate similar statements are okay. You can even place comments here if you feel it is necessary (more on comments later).
 {% gist fd77420962eef5f6da1d7f294794d265 %}
 **One top-level class per file**. Nested classes are okay, but other than that, each class should be in its own .java file. If you're finding it hard to switch between files, considering using a more competent text editor (I recommend sublimetext).
 
 Class names should be in UpperCamelCase.
 
-### Formatting
+## Formatting
 
-#### Braces
+### Braces
 If braces are optional, their placement is optional. If you think that the body of the statement may increase in the future, place them, if they help clear confusion, place them, but if it is more concise without them, don't place them.
 
 ```java
@@ -116,7 +116,7 @@ Only use empty loops if they help legibility, avoid over-complicating.
 
 Line-wrap where it makes sense (don't have super-long lines, but there is no clear formula for knowing when to break).
 
-#### Indentation
+### Indentation
 
 **Tabs for indentation, spaces for alignment.** There is no debate.
 
@@ -143,10 +143,10 @@ public class doSomething() {
 ```
 For more information, read [this article][tabs vs spaces].
 
-#### Whitespace
+### Whitespace
 In this section I particularly agree with (and copy from) [Google's Java Style Guides][google java style whitespace], although there are some slight modifications I make. All credit goes to them, however.
 
-##### Vertical Whitespace
+#### Vertical Whitespace
 
 A single blank line appears:
 
@@ -156,7 +156,7 @@ A single blank line appears:
 2. Between statements, as needed to organize the code into logical subsections.
 3. Optionally before the first member or after the last member of the class (neither encouraged nor discouraged).
 
-##### Horizontal Whitespace
+#### Horizontal Whitespace
 Beyond where required by the language or other style rules, and apart from literals, comments and Javadoc, a single ASCII space also appears in the following places only:
 
 1. Separating any reserved word, such as if, for or catch, from an open parenthesis (() that follows it on that line
@@ -182,7 +182,7 @@ Beyond where required by the language or other style rules, and apart from liter
 
 This rule is never interpreted as requiring or forbidding additional space at the start or end of a line; it addresses only interior space.
 
-##### Horizontal Alignment
+#### Horizontal Alignment
 Neither required, encouraged, nor discouraged. If you want to horizontally align, do it.
 Horizontal alignment is:
 ```java
@@ -197,10 +197,10 @@ private String     myString;
 private BigInteger myBigInteger;
 ```
 
-#### Grouping Parenthesis
+### Grouping Parenthesis
 Use when it helps interpretation.
 
-#### Variable Declarations
+### Variable Declarations
 Global variables should be declared on the top of the class, before the constructor, and initialized in the constructor (except constants, which should be first and initialized in the same line). It is ok to declare multiple global variables on the same line when logical (xCoord, yCoord).
 
 Local variables should be declared near first used, not always on the top of the method.
@@ -250,7 +250,7 @@ new int[] {             3,
 }                     new int[]
                           {0, 1, 2, 3}
 ```
-#### Switch Statements
+### Switch Statements
 End blocks with a break, continue, return, or thrown exception. If you purposely want the code to fall through, mention it with a comment.
 
 If default statements are not required, you may or may not put them. Breaks for them are also not necessary, but recommended.
@@ -276,7 +276,7 @@ switch (numDots)	{
 }
 ```
 
-#### Comments
+### Comments
 Use /* */ for multiline comments. Use // comments to clear confusion, but on their own line (unless the statement is very simple like basic getters and setters).
 
 Use javadoc comments for all public methods and classes, and for private ones when necessary. Every file should have an initial javadoc comment immediately before the class definition.
@@ -295,7 +295,7 @@ public long factorial(long num) {
 }
 ```
 
-### Conclusion
+## Conclusion
 The most important use of a styleguide is to make sure that code is formatted and edited consistently in order to promote malleability, teamwork, and sustainability. Even if you don't follow this styleguide completely, at least know what your own preferences are and follow them consistently.
 
 That being said, any code Java made for The Ofek Foundation should be styled according to this style guide since it is objectively superior. If you have any comments, feedback, or concerns, feel free to contact me at ofek@theofekfoundation.org

@@ -2,9 +2,8 @@
 title: Tic Tac Toe AI with Depth-First Search
 category: artificial-intelligence
 subcategory: depth-first-search
+layout: post
 ---
-
-## Tic Tac Toe AI with a Depth-First Search
 
 This is my first post, so please don't be too rough or judge too harshly.
 

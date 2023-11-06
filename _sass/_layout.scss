@@ -2,9 +2,9 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    border-top: $header-border-top-size solid $grey-color-dark;
+    border-bottom: $header-border-bottom-size solid $grey-color-light;
+    min-height: $header-height;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -59,7 +59,7 @@
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
-        right: $spacing-unit / 2;
+        right: calc($spacing-unit / 2);
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
@@ -118,7 +118,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 .contact-list,
@@ -130,14 +130,14 @@
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
+    margin-left: calc($spacing-unit / -2);
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
+    padding-left: calc($spacing-unit / 2);
 }
 
 .footer-col-1 {
@@ -252,5 +252,104 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+$toc-container-top: $header-total-height + $spacing-unit;
+$toc-content-height: calc(100vh - 3 * $header-total-height);
+
+$toc-transition-duration: 0.3s;
+
+.toc-container {
+    position: fixed;
+    left: $spacing-unit;
+    top: $toc-container-top;
+    z-index: 100;
+
+    .toc-icon {
+        cursor: pointer;
+        transition: background-color $icon-transition-duration ease,
+            transform $icon-transition-duration ease;
+        background-color: $background-color;
+        border-radius: 50%; // Circular effect
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 70px;
+        height: 70px;
+    
+        &:hover {
+            background-color: $brand-background-color;
+            transform: scale($icon-hover-scale);
+        }
+    
+        img {
+            width: 50px;
+            height: 50px;
+            transition: filter $icon-transition-duration ease;
+            filter: grayscale(100%);
+        }
+    
+        &:hover img {
+            filter: grayscale(0%); // Full color on hover
+        }
+    }
+      
+    .toc-content {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: visibility 0s linear $toc-transition-duration, 
+                    opacity $toc-transition-duration ease, 
+                    transform $toc-transition-duration ease;
+        position: absolute;
+
+        left: calc(100% + $spacing-unit);
+        top: -$spacing-unit;
+        min-width: 150px;
+        max-width: calc(80vw - 100% - 2 * $spacing-unit);
+        max-height: $toc-content-height;
+        white-space: nowrap;
+        padding: $spacing-unit;
+        background: $background-color;
+        border-radius: $spacing-unit; // Soften the corners
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        color: $text-color;
+        overflow-y: auto;
+        z-index: 100;
+
+        &::-webkit-scrollbar {
+            display: none; // This hides the scrollbar in Webkit browsers
+        }
+        
+        // Hides scrollbar for IE, Edge, and Firefox
+        -ms-overflow-style: none;  // Internet Explorer and Edge
+        scrollbar-width: none;
+
+        ul {
+            margin-bottom: 0;
+        }
+    }
+    
+    .toc-content.stay-open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0); // Reset to original position
+        transition-delay: 0s; // Reset delay so the TOC shows immediately
+    }
+}
+
+.palm-toc {
+    display: none;
+}
+
+@include media-query($on-palm) {
+    .toc-container {
+        display: none;
+    }
+
+    .palm-toc {
+        display: block;
     }
 }

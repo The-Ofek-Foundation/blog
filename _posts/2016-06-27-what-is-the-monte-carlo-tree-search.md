@@ -2,9 +2,8 @@
 title: What is the Monte Carlo tree search?
 category: artificial-intelligence
 subcategory: monte-carlo-tree-search
+layout: post
 ---
-
-## What is the Monte Carlo tree search?
 
 In this post, we'll be covering when a [Monte Carlo tree search][monte carlo ts wiki] algorithm&mdash;a very new (2006!) form of game AI&mdash;should be used, its basics, and a naive implementation. If you doubt the power of this algorithm, just check out either my [Ultimate Tic Tac Toe engine][my uttt] or my [Connect Four engine][my connect four].
 

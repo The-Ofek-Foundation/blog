@@ -2,9 +2,8 @@
 title: Minimax Improvements
 category: artificial-intelligence
 subcategory: minimax
+layout: post
 ---
-
-## Minimax Improvements
 
 In the [last post] we discussed the implementation of [Minimax][minimax wiki] for game AIs, specifically with [Gomoku][gomoku wiki]. In this post, we'll cover general improvements for minimax that can be made. While they might not all apply to all games, they may apply to general **[zero-sum games][zero-sum game wiki]**, like chess, connect four, checkers, etc... Note that most of these improvements are *very game-specific*.
 

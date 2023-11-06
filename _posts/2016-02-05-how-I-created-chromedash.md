@@ -6,19 +6,18 @@ custom-script: false
 custom-style: true
 custom-style-rel: chrome-webstore-item
 custom-style-src: https://chrome.google.com/webstore/detail/bbpiealmmbiefhppikadopbljoppcnoa
+layout: post
 ---
 
-## How I Created ChromeDash
-
-### Preface
+## Preface
 
 I built a [chrome extension (ChromeDash)][my extension] a week ago that allows the user to alias specific words with others, so that while they type online it will automatically switch what they type with the aliases. This was made with the intention to be able to type special characters conveniently in normal chats—including [en and em-dashes][wiki dashes], [greek characters][wiki greek], [accents][wiki accents], and other symbols in general. For example, --- could be be replace with an em-dash (—), or \alpha with α, a' with á, etc. The idea is: *instead of constantly copy pasting special symbols or switching between keyboard settings, there'd be a way to type any key with ease.* I built this extension because—to my surprise—**there was no convenient way to alias words like this anywhere online.**
 
-### How to Create a Chrome Extension
+## How to Create a Chrome Extension
 
 I'm not going to go too much into this because it is [well-documented][chrome extension documentation], and there are [many online tutorials][chrome extension tutorials]. However, I should probably note that if you want your website to be hosted in the [Chrome Web Store], **you will need to pay $5 to create a google developer account.**
 
-### How to Detect Aliases and Replace the Text
+## How to Detect Aliases and Replace the Text
 
 The most basic functionality of a word or string aliaser is the ability to detect when the user types an alias, and to replace what they wrote with the alias. Doing this can be broken down into four parts:
 
@@ -47,7 +46,7 @@ Here's a quick sample of the flow:
 After you find the alias, replace the text in the string with that of the alias, update the content of the element, prevent the pressed character from being added to the new string and set the new caret position. Setting a a caret position can be done like [this][set caret position value] for inputs and textareas, and like [this][set caret position] for others. Here is an example of how to do that:
 {% gist e20fd845c3b7b8e7eaafe0ae204ab2f5 %}
 
-### Problems with the Extension
+## Problems with the Extension
 
 1. **Websites that Block Content Scripts**
 

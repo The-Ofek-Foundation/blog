@@ -2,15 +2,14 @@
 title: 2D Array Copy Speeds
 category: general-computer-programming
 subcategory: efficiency
+layout: post
 ---
 
-## {{page.title}}
-
-### Preface
+## Preface
 
 When creating [my AI for Connect Four][My Connect Four AI] using the [Monte Carlo tree search][MCTS wiki] algorithm, I needed to create and store a huge tree. Each node needed to contain its own state of the board in order to be able to run simulations with it. For more information about the specifics of the tree search, find it on [Wikipedia][MCTS wiki]. The states of the board needed to be independent of each other, so I needed to [deep copy][deep copy wiki] the board 2D array, not [shallow copy][shallow copy wiki]. Using jQuery extend or JSON.stringify with JSON.parse is simply too slow. **There are much more efficient methods to copy 2D arrays.**
 
-### Methods
+## Methods
 
 You can test the speeds of these methods below.
 
@@ -47,7 +46,7 @@ You can test the speeds of these methods below.
 
   As you may have guessed, the MCTS would simply contain strings of the position that can be converted to boards. This method is much more space efficient than storing as JSON or 1D arrays, and is significantly faster when the board is not heavily filled. *This method becomes slower as the game goes on—slightly slower than a 1D array*—but for Connect Four the thinking in the start of the game is more important making this method preferable.
 
-### Speed Tests
+## Speed Tests
 
 Now for the moment you have all been waiting for—the speed tests! Generate 1000 new Connect Four boards and use each method to deep copy the boards. Each method will have a limited amount of time to try to copy as much as it can. It is worth mentioning that these boards are a maximum of 25 moves into the game.
 
