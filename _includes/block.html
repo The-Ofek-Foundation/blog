@@ -1,0 +1,22 @@
+{% assign block_data = site.data.blocks[include.type] %}
+
+<div class="{{ include.type }}-block block">
+    <span class="icon material-symbols-outlined">{{ block_data.icon }}</span>
+    <div>
+        {% if include.title %}
+            <p>
+                <span><strong>{{ block_data.label }}:</strong></span>
+                <span class="title">{{ include.title }}</span>
+            </p>
+        {% endif %}
+        <p>{{ include.content }}</p>
+        {% if include.footer %}
+            <p class="footer">{{ include.footer }}</p>
+        {% endif %}
+    </div>
+    {% if include.link %}
+        <a href="{{ include.link }}" class="link-icon" target="_blank" rel="noopener noreferrer" title="Read more">
+            <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+    {% endif %}
+</div>

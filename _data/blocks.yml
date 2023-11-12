@@ -1,0 +1,37 @@
+
+tip:
+  icon: "lightbulb"
+  label: "Tip"
+fallacy:
+  icon: "mystery"
+  label: "Fallacy Detective"
+note:
+  icon: "sticky_note_2"
+  label: "Note"
+question:
+  icon: "question_mark"
+  label: "Question"
+highlight:
+  icon: "highlight"
+  label: "Highlight"
+definition:
+  icon: "book"
+  label: "Definition"
+resource:
+  icon: "link"
+  label: "Resource"
+checklist:
+  icon: "checklist"
+  label: "Checklist"
+quote:
+  icon: "format_quote"
+  label: "Quote"
+fun_fact:
+  icon: "psychology"
+  label: "Fun Fact"
+remember:
+  icon: "campaign"
+  label: "Remember"
+did_you_know:
+  icon: "lightbulb"
+  label: "Did You Know"
