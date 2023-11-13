@@ -435,7 +435,8 @@ $block-colors: (
     "quote": #9e9e9e,
     "fun-fact": #607d8b,
     "remember": #ff5722,
-    "did-you-know": #3f51b5
+    "did-you-know": #3f51b5,
+    "fact-check": #8bc34a
 );
 
 @each $name, $color in $block-colors {

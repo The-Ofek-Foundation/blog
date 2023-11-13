@@ -1,4 +1,3 @@
-
 tip:
   icon: "lightbulb"
   label: "Tip"
@@ -35,3 +34,6 @@ remember:
 did_you_know:
   icon: "lightbulb"
   label: "Did You Know"
+fact_check:
+  icon: "fact_check"
+  label: "Fact Check"

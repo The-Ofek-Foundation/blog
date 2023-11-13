@@ -176,7 +176,7 @@ Yes, I am openly admitting to not having an answer to a question that many relig
 
 All joking aside, we all know people who talk confidently about things that they are not sure about. Many of us have probably done this ourselves in our personal lives. Talking with confidence when you aren't sure is _not_ a sign of strength. Ironically, it takes true self confidence to have the humility to say that you don't know. Saying that you don't know is not proof that the other argument is right. **I state that I do not know how the universe originated out of a position of _strength_.**
 
-{% include block.html type="quote" content="I would rather have questions that can't be answered than answers that can't be questioned." footer="<em>—Often attributed to Richard Feynman</em>" %}
+{% include block.html type="quote" content="I would rather have questions that can't be answered than answers that can't be questioned." footer="<em>—Often attributed to Richard Feynman</em>" link="https://en.wikiquote.org/wiki/Talk:Richard_Feynman#%22I_would_rather_have_questions_that_cannot_be_answered%22" %}
 
 ## Chapter Four: The Teleological Approach to God's Existence
 
@@ -190,19 +190,25 @@ As stated before, Kelemen starts showing many examples of how sophisticated and 
 
 > Man has never succeeded in building a computer that can match DNA’s data-storage and reproductive capabilities. Neither has he ever constructed a television camera that can mimic the human eye's brightness range, focal flexibility, and image-processing abilities. Nor has he yet assembled a communications network with as many specific connections as a single human brain. The human body dwarfs in complexity any object man has ever designed. [^11]
 
-All of what he states is indeed true _today_. The caveman also has never succeeded in transporting an object from earth to space. Does that mean that it will never be able to? Throughout history, mankind as been able to achieve more and more complex feats that were previously thought to be impossible. Specifically in recent history we have seen a huge increase in the rate of technological advancement. Why stop at such an arbitrary snapshot in time that is the writing of this book, when the realm of what mankind is able to accomplish is so rapidly expanding?
+All of what he states is indeed true _today_. The caveman also has never succeeded in transporting an object from earth to space. Does that mean that it will never be able to? Throughout history, humankind as been able to achieve more and more complex feats that were previously thought to be impossible. Specifically in recent history we have seen a huge increase in the rate of technological advancement. Why stop at such an arbitrary snapshot in time that is the writing of this book, when the realm of what humankind is able to accomplish is so rapidly expanding?
+
+{% include block.html type="fallacy" title="Argument from Ignorance" content="In this instance, Kelemen's argument assumes that the current limitations of human technology in replicating natural systems like the brain or eye are evidence of their unmatched complexity. However, this is an <em>argument from ignorance</em>; it confuses the absence of proof (technological equivalents) with proof of absence (the impossibility of such technology). The potential of human ingenuity cannot be underestimated based on current technological states." link="https://en.wikipedia.org/wiki/Argument_from_ignorance" %}
 
 To further show how utterly silly this argument is, you can make an equivalent argument in the opposite direction:
 
 > Nature has never succeeded in creating an object that can escape the earth's gravitational pull at will. Neither has she ever constructed a device that can process and recall information as quickly as a modern computer can. Nor has she erected structures both as thin and as tall as skyscrapers. Nor has she yet assembled a communications network as immediate and far reaching as the internet, allowing the transfer of video, audio, and text accurately across the globe in an instant.
 
-Nature accomplished so much, but in a staggeringly large amount of time (billions of years). Consider how much mankind has advanced in the past 100 years, eight orders of magnitude less time. Note that I agree with Kelemen's point that nature is incredibly complex, and I even agree that it is unlikely that mankind will ever fully be able to replicate it, especially at such a large scale. However, I just found this part of Kelemen's argument to be so silly as to necessitate a response.
+{% include block.html type="fallacy" title="False Analogy" content="A false analogy fallacy occurs when there's an improper comparison between dissimilar phenomena. Arguing that nature hasn't engineered feats like human technology is as illogical as saying technology can't rival natural complexity. Both views neglect the fundamental differences in scale, timeframe, and driving mechanism between nature's evolutionary processes and human innovation, making the analogy inherently flawed." link="https://en.wikipedia.org/wiki/Argument_from_analogy#False_analogy" %}
+
+Nature accomplished so much, but in a staggeringly large amount of time (billions of years). Consider how much humankind has advanced in the past 100 years, eight orders of magnitude less time. Note that I agree with Kelemen's point that nature is incredibly complex, and I even agree that it is unlikely that humankind will ever fully be able to replicate it, especially at such a large scale. However, I just found this part of Kelemen's argument to be so silly as to necessitate a response.
 
 ### Unusual Equilibria in Earth
 
 Sorry, just one more example. In this example, Kelemen argues that the earth is in a very delicate equilibrium, and that if any of the following were to change, life would not be possible.
 
 > Were the Earth’s average air temperature a mere ten degrees higher, surface rocks would release higher levels of CO2, stimulating a runaway greenhouse effect that would boil away the oceans and destroy all life. Conversely, were the Earth’s average air temperature ten degrees cooler, glacial icing would increase at the polar caps, raising the percentage of solar heat reflected back into space and setting off a lethal, global glaciation. [^12]
+
+{% include block.html type="fact-check" title="Earth's Temperature History" content="Geological records show that Earth's climate has been both significantly warmer and cooler than today, with life persisting through these changes. This contradicts his assertion of a narrow temperature range being vital for life." link="https://en.wikipedia.org/wiki/Geologic_temperature_record" %}
 
 Anyone who has passed a public middle school, at least in the United States, would be able to see some glaring flaws with this argument. First, let's do a quick look into the average temperature on Earth. Note that obtaining historical data for average _air_ temperature is much harder than for average _surface_ temperature. However, they are very closely related[^13], so I will use the latter as a proxy for the former. Here is a graph of the [Geologic temperature record]:
 
