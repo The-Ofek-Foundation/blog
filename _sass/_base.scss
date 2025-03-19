@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "variables" as *;
+
 /**
  * Reset some basic elements
  */
@@ -137,7 +140,7 @@ a {
 	text-decoration: none;
 
 	&:visited {
-		color: darken($brand-color, 15%);
+		color: color.adjust($brand-color, $lightness: -15%);
 	}
 
 	&:hover {
@@ -214,7 +217,7 @@ tt {
 	margin-left: auto;
 	padding-right: $spacing-unit;
 	padding-left: $spacing-unit;
-	@extend %clearfix;
+	@extend %clearfix !optional;
 
 	@include media-query($on-laptop) {
 		max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));

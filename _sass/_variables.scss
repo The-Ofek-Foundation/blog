@@ -1,0 +1,49 @@
+@use "sass:color";
+
+// Our variables
+$base-font-family: 'PT Sans', sans-serif;
+$heading-font-family: 'Source Sans Pro', sans-serif;
+$code-font-family: 'Source Code Pro', monospace;
+$block-font-family: 'Source Sans 3', sans-serif;
+$base-font-size:   1.32em;
+$blockquote-font-size: 20px;
+$base-font-weight: 400;
+$heading-font-weight: 300;
+$small-font-size:  $base-font-size * 0.5;
+$base-line-height: 1.5;
+
+$header-height: 56px;
+$header-border-top-size: 5px;
+$header-border-bottom-size: 1px;
+$header-total-height: $header-height + $header-border-top-size + $header-border-bottom-size;
+
+$spacing-unit:     30px;
+$code-tab-size:    4;
+
+$text-color:       #3f3f3f;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+$brand-background-color: color.adjust($brand-color, $lightness: 30%);
+
+$grey-color:       #828282;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark:  color.adjust($grey-color, $lightness: -25%);
+
+$icon-hover-scale: 1.05; // Slight increase in size to indicate hover
+$icon-transition-duration: 0.3s;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Table styles
+$alternate-row-color: $grey-color-light;
+$border-color: $grey-color-dark;
+
+@mixin media-query($device) {
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}

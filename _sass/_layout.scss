@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "variables" as *;
+
 /**
  * Site header
  */
@@ -131,7 +134,7 @@
     font-size: 15px;
     color: $grey-color;
     margin-left: calc(#{$spacing-unit} / -2);
-    @extend %clearfix;
+    @extend %clearfix !optional;
 }
 
 .footer-col {
@@ -441,7 +444,7 @@ $block-colors: (
 
 @each $name, $color in $block-colors {
   .#{$name}-block {
-    background-color: lighten($color, 40%);
+    background-color: color.adjust($color, $lightness: 40%);
     border-left: 5px solid $color;
 
     .icon {
@@ -449,11 +452,11 @@ $block-colors: (
     }
 
     .title {
-      color: darken($color, 30%);
+      color: color.adjust($color, $lightness: -30%);
     }
 
     .footer {
-      color: darken($color, 30%);
+      color: color.adjust($color, $lightness: -30%);
     }
 
     .link-icon {
