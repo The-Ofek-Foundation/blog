@@ -10,7 +10,9 @@
                 <span class="title">{{ include.title }}</span>
             </p>
         {% endif %}
-        <p>{{ include.content }}</p>
+        <div class="block-content">
+            {{ include.content }}
+        </div>
         {% if include.footer %}
             <p class="footer">{{ include.footer }}</p>
         {% endif %}
